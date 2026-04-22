@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сантехнические услуги — Демо</title>
+  <link rel="stylesheet" href="demo-common.css">
+  <style>
+    :root{--primary:#1D4ED8;--accent:#2563EB;--bg:#EFF6FF;--text:#111827;--secondary:#6B7280;--font:'Inter','Segoe UI',Arial,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:#fff;color:var(--text);line-height:1.6;}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px;}
+    h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.15;}
+    h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;}
+    h3{font-size:1.05rem;font-weight:700;}
+
+    .site-header{background:#0F172A;padding:14px 0;}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo{font-size:1.2rem;font-weight:800;color:#fff;}
+    .logo span{color:#60A5FA;}
+    .header-phone{color:#60A5FA;font-size:1rem;font-weight:700;text-decoration:none;}
+    .header-tag{background:#DC2626;color:#fff;border-radius:4px;padding:2px 8px;font-size:0.78rem;font-weight:700;}
+    .btn-cta{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:0.9rem;font-weight:600;cursor:pointer;}
+    .btn-cta:hover{background:var(--primary);}
+
+    .hero{background:linear-gradient(135deg,#0F172A,#1E3A5F);color:#fff;padding:64px 0;}
+    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;}
+    .urgent-tag{display:inline-flex;align-items:center;gap:6px;background:#DC2626;color:#fff;border-radius:99px;padding:5px 14px;font-size:0.82rem;font-weight:700;margin-bottom:14px;}
+    .hero h1{margin-bottom:14px;}
+    .hero h1 em{font-style:normal;color:#60A5FA;}
+    .hero-sub{color:#94A3B8;font-size:1rem;margin-bottom:24px;max-width:440px;}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;}
+    .btn-primary{background:var(--accent);color:#fff;border:none;border-radius:12px;height:54px;padding:0 28px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.15s;display:inline-flex;align-items:center;gap:8px;}
+    .btn-primary:hover{background:var(--primary);}
+    .btn-phone{background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.2);border-radius:12px;height:54px;padding:0 24px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:background 0.15s;display:inline-flex;align-items:center;gap:8px;}
+    .btn-phone:hover{background:rgba(255,255,255,0.2);}
+    .hero-guarantee{display:flex;gap:16px;flex-wrap:wrap;}
+    .guarantee-item{display:flex;align-items:center;gap:6px;font-size:0.85rem;color:#94A3B8;}
+    .guarantee-item svg{color:#4ADE80;}
+    .hero-info{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:24px;}
+    .hero-info-title{color:#60A5FA;font-size:0.82rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px;}
+    .info-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:0.88rem;}
+    .info-row:last-child{border-bottom:none;}
+    .info-label{color:#94A3B8;}
+    .info-val{color:#fff;font-weight:600;}
+
+    .services{padding:72px 0;background:var(--bg);}
+    .section-header{text-align:center;margin-bottom:40px;}
+    .section-header h2{margin-bottom:10px;}
+    .section-header p{color:var(--secondary);max-width:500px;margin:0 auto;}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .service-card{background:#fff;border:1px solid #BFDBFE;border-radius:16px;padding:24px;transition:box-shadow 0.2s;}
+    .service-card:hover{box-shadow:0 6px 20px rgba(37,99,235,0.12);}
+    .service-icon{font-size:2rem;margin-bottom:10px;}
+    .service-card h3{margin-bottom:6px;}
+    .service-card p{font-size:0.86rem;color:var(--secondary);}
+    .service-price{color:var(--accent);font-weight:700;font-size:0.88rem;margin-top:8px;}
+
+    .advantages{padding:72px 0;background:#fff;}
+    .adv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .adv-card{text-align:center;background:var(--bg);border:1px solid #BFDBFE;border-radius:16px;padding:24px;}
+    .adv-num{font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:4px;}
+    .adv-label{font-size:0.88rem;color:var(--secondary);}
+
+    .prices{padding:72px 0;background:var(--bg);}
+    .prices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .price-card{background:#fff;border:1.5px solid #BFDBFE;border-radius:16px;padding:28px;}
+    .price-card.featured{border-color:var(--accent);box-shadow:0 4px 20px rgba(37,99,235,0.12);}
+    .price-name{font-size:0.85rem;font-weight:600;color:var(--secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+    .price-val{font-size:1.7rem;font-weight:800;margin-bottom:14px;}
+    .price-list{list-style:none;margin-bottom:20px;}
+    .price-list li{font-size:0.88rem;padding:5px 0;border-bottom:1px solid #EFF6FF;display:flex;gap:8px;}
+    .price-list li::before{content:"✓";color:var(--accent);font-weight:700;flex-shrink:0;}
+    .p-btn{width:100%;height:44px;border:none;border-radius:10px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.15s;}
+    .p-btn.primary{background:var(--accent);color:#fff;}
+    .p-btn.primary:hover{background:var(--primary);}
+    .p-btn.secondary{background:var(--bg);color:var(--text);border:1.5px solid #BFDBFE;}
+    .p-btn.secondary:hover{background:#DBEAFE;}
+
+    .reviews{padding:72px 0;background:#fff;}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .review-card{background:var(--bg);border:1px solid #BFDBFE;border-radius:14px;padding:20px;}
+    .review-stars{color:#F59E0B;margin-bottom:8px;}
+    .review-text{font-size:0.89rem;color:var(--secondary);margin-bottom:10px;line-height:1.6;}
+    .review-author{font-size:0.86rem;font-weight:600;}
+
+    .cta-section{padding:64px 0;background:#0F172A;}
+    .cta-inner{text-align:center;max-width:600px;margin:0 auto;}
+    .cta-inner h2{color:#fff;margin-bottom:10px;}
+    .cta-inner p{color:#94A3B8;margin-bottom:28px;}
+    .cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .btn-wa{background:#25D366;color:#fff;border:none;border-radius:12px;height:52px;padding:0 24px;font-size:0.95rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;}
+    .btn-wa:hover{background:#1ebe58;}
+
+    footer{background:#0C111B;color:#4B5563;padding:28px 0;}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+    .footer-logo{font-size:1rem;font-weight:800;color:#fff;}
+    .footer-logo span{color:#60A5FA;}
+
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-info{display:none;}
+      .services-grid{grid-template-columns:repeat(2,1fr);}
+      .adv-grid{grid-template-columns:repeat(2,1fr);}
+      .prices-grid{grid-template-columns:1fr;}
+      .reviews-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:640px){.services-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="demo-panel">
+  <span class="demo-panel-text">Это демонстрационный пример сайта</span>
+  <div class="demo-panel-actions">
+    <a href="../index.html#portfolio" class="demo-back">← Вернуться к портфолио</a>
+    <button class="demo-order" onclick="demoToast()">Заказать похожий</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">Сантех<span>Сервис</span></div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="header-tag">24/7</span>
+        <a href="tel:+79001234567" class="header-phone">+7 900 123-45-67</a>
+      </div>
+      <button class="btn-cta" onclick="demoToast()">Вызвать сантехника</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <span class="urgent-tag">🔵 Срочный выезд 24/7</span>
+        <h1>Сантехник на дом — <em>выезд за 1 час</em></h1>
+        <p class="hero-sub">Устраняем протечки, меняем краны и трубы, устанавливаем сантехнику. Опытные мастера с гарантией на работу.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="demoToast()">💧 Вызвать сантехника</button>
+          <button class="btn-phone" onclick="demoToast()">📞 Позвонить</button>
+        </div>
+        <div class="hero-guarantee">
+          <span class="guarantee-item">✅ Приезд за 1 час</span>
+          <span class="guarantee-item">✅ Гарантия 1 год</span>
+          <span class="guarantee-item">✅ Смета до начала работ</span>
+        </div>
+      </div>
+      <div class="hero-info">
+        <div class="hero-info-title">График работы</div>
+        <div class="info-row"><span class="info-label">Режим работы</span><span class="info-val">24/7, без выходных</span></div>
+        <div class="info-row"><span class="info-label">Выезд</span><span class="info-val">от 1 часа</span></div>
+        <div class="info-row"><span class="info-label">Минимальный заказ</span><span class="info-val">от 800 ₽</span></div>
+        <div class="info-row"><span class="info-label">Оплата</span><span class="info-val">После выполнения</span></div>
+        <div class="info-row"><span class="info-label">Гарантия</span><span class="info-val">12 месяцев</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="section-header"><h2>Услуги сантехника</h2><p>Решаем любые задачи с водопроводом и отоплением</p></div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🚿</div><h3>Замена смесителей</h3><p>Краны, душевые стойки, смесители любых марок</p><div class="service-price">от 800 ₽</div></div>
+      <div class="service-card"><div class="service-icon">💧</div><h3>Устранение протечек</h3><p>Срочный ремонт труб и соединений</p><div class="service-price">от 1 200 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🚽</div><h3>Ремонт унитаза</h3><p>Замена арматуры, устранение течи бачка</p><div class="service-price">от 1 000 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🛁</div><h3>Установка сантехники</h3><p>Ванны, душевые кабины, умывальники</p><div class="service-price">от 2 500 ₽</div></div>
+      <div class="service-card"><div class="service-icon">♨️</div><h3>Отопление</h3><p>Радиаторы, трубы, промывка системы</p><div class="service-price">от 1 500 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🔧</div><h3>Прочистка труб</h3><p>Устранение засоров механически и химически</p><div class="service-price">от 900 ₽</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="container">
+    <div class="section-header"><h2>Почему выбирают нас</h2></div>
+    <div class="adv-grid">
+      <div class="adv-card"><div class="adv-num">7 лет</div><div class="adv-label">опыта в Москве</div></div>
+      <div class="adv-card"><div class="adv-num">2000+</div><div class="adv-label">выполнено заявок</div></div>
+      <div class="adv-card"><div class="adv-num">1 час</div><div class="adv-label">время выезда</div></div>
+      <div class="adv-card"><div class="adv-num">12 мес</div><div class="adv-label">гарантия на работы</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="prices">
+  <div class="container">
+    <div class="section-header"><h2>Стоимость работ</h2><p>Точная цена после осмотра. Никаких скрытых платежей</p></div>
+    <div class="prices-grid">
+      <div class="price-card">
+        <div class="price-name">Стандарт</div>
+        <div class="price-val">от 800 ₽</div>
+        <ul class="price-list"><li>Замена крана/смесителя</li><li>Ремонт бачка унитаза</li><li>Замена прокладок</li><li>Мелкий ремонт</li></ul>
+        <button class="p-btn secondary" onclick="demoToast()">Заказать</button>
+      </div>
+      <div class="price-card featured">
+        <div class="price-name">Срочный</div>
+        <div class="price-val">от 1 500 ₽</div>
+        <ul class="price-list"><li>Выезд за 1 час</li><li>Устранение протечек</li><li>Ремонт труб</li><li>Работа ночью/в выходные</li></ul>
+        <button class="p-btn primary" onclick="demoToast()">Вызвать срочно</button>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Монтаж</div>
+        <div class="price-val">от 2 500 ₽</div>
+        <ul class="price-list"><li>Установка ванны/душа</li><li>Монтаж радиаторов</li><li>Прокладка труб</li><li>Подключение водонагревателя</li></ul>
+        <button class="p-btn secondary" onclick="demoToast()">Рассчитать</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-header"><h2>Отзывы клиентов</h2></div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Ночью прорвало трубу. Мастер приехал через 45 минут. Устранил быстро и чисто. Очень выручили.</div><div class="review-author">Елена П., Москва</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Поменяли все краны в ванной и на кухне. Работают отлично, всё аккуратно. Цена соответствует качеству.</div><div class="review-author">Игорь В., МО</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Установили новую ванну. Мастер всё сделал ровно, без щелей. Порядок после себя навёл. Рекомендую.</div><div class="review-author">Светлана М., Москва</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Нужен сантехник прямо сейчас?</h2>
+      <p>Позвоните или напишите в WhatsApp — приедем в течение часа по Москве и МО</p>
+      <div class="cta-actions">
+        <button class="btn-primary" onclick="demoToast()">📞 Позвонить</button>
+        <button class="btn-wa" onclick="demoToast()">WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Сантех<span>Сервис</span></div>
+      <div>© 2025 СантехСервис — демонстрационный макет</div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Это демо-макет. Чтобы заказать похожий сайт, вернитесь на основной лендинг.</div>
+<script>function demoToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}</script>
+</body>
+</html>
