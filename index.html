@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создание сайтов под ключ от 9 900 ₽ — лендинги, сайты услуг, интернет-магазины</title>
+  <meta name="description" content="Разработка сайтов под ключ без подписки на конструкторы. Лендинги, сайты услуг, многостраничные сайты и мини-магазины. Адаптив, заявки, хостинг, домен и Яндекс.Метрика.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">Cloud<span>Code</span></a>
+      <nav class="nav">
+        <a href="#portfolio">Примеры сайтов</a>
+        <a href="#tariffs">Цены</a>
+        <a href="#process">Как работаем</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="header-cta">
+        <a href="#contact" class="btn-primary">Рассчитать стоимость</a>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#portfolio" onclick="closeMobileMenu()">Примеры сайтов</a>
+  <a href="#tariffs" onclick="closeMobileMenu()">Цены</a>
+  <a href="#process" onclick="closeMobileMenu()">Как работаем</a>
+  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+  <a href="#contact" class="btn-primary" style="text-align:center;justify-content:center;" onclick="closeMobileMenu()">Рассчитать стоимость</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-label">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Запуск от 2–5 дней
+        </div>
+        <h1>Сайт под ключ<br>для бизнеса <em>от 9 900 ₽</em></h1>
+        <p class="hero-sub">Создаю лендинги, сайты услуг и простые интернет-магазины на чистом коде — без подписки на конструкторы. Помогаю с доменом, хостингом, заявками и Яндекс.Метрикой.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="openModal()">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Рассчитать стоимость сайта
+          </button>
+          <a href="#portfolio" class="btn-secondary">
+            Посмотреть примеры
+          </a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>
+            Без подписки на Tilda
+          </span>
+          <span class="badge">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            Адаптив под телефон
+          </span>
+          <span class="badge">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+            Заявки в Telegram/WhatsApp
+          </span>
+          <span class="badge">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            Запуск от 2–5 дней
+          </span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="device-wrap">
+          <div>
+            <div class="mockup-laptop">
+              <div class="laptop-screen">
+                <div class="laptop-screen-inner">
+                  <div class="screen-nav"></div>
+                  <div class="screen-hero"></div>
+                  <div class="screen-blocks">
+                    <div class="screen-block"></div>
+                    <div class="screen-block"></div>
+                    <div class="screen-block"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+            <div class="laptop-foot"></div>
+          </div>
+          <div class="mockup-phone">
+            <div class="phone-screen">
+              <div class="phone-screen-inner">
+                <div class="phone-block"></div>
+                <div class="phone-block"></div>
+                <div class="phone-block"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-badge-floating">🔗 Домен + хостинг + Метрика — подключу под ключ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Примеры сайтов для разных ниш</h2>
+      <p>Покажите клиенту не просто картинку, а живое демо: как сайт выглядит на компьютере и телефоне.</p>
+    </div>
+
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="services">Услуги</button>
+      <button class="filter-btn" data-filter="multi">Многостраничные</button>
+      <button class="filter-btn" data-filter="shop">Интернет-магазины</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <!-- Юридические услуги -->
+      <div class="portfolio-card reveal" data-category="services">
+        <div class="card-visual legal">
+          <div class="card-laptop">
+            <div class="card-laptop-screen">
+              <div class="card-laptop-screen-inner">
+                <div class="cls-nav"></div>
+                <div class="cls-hero" style="background:linear-gradient(90deg,#dbeafe 60%,transparent)"></div>
+                <div class="cls-blocks"><div class="cls-block"></div><div class="cls-block"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-phone">
+            <div class="card-phone-screen">
+              <div class="cps-inner"><div class="cps-block"></div><div class="cps-block"></div><div class="cps-block"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-badge">Сайт услуг</span>
+            <span class="card-mobile-tag">ПК + Mobile</span>
+          </div>
+          <div class="card-title">Юридические услуги</div>
+          <div class="card-desc">Строгий сайт для юридической компании с акцентом на доверие, опыт и консультации.</div>
+          <div class="card-actions">
+            <button class="btn-demo" onclick="window.open('demos/legal.html','_blank')">Открыть демо</button>
+            <button class="btn-order" onclick="orderSimilar('Сайт услуг — Юридические услуги')">Заказать похожий</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Бухгалтерия -->
+      <div class="portfolio-card reveal" data-category="services">
+        <div class="card-visual accounting">
+          <div class="card-laptop">
+            <div class="card-laptop-screen">
+              <div class="card-laptop-screen-inner">
+                <div class="cls-nav"></div>
+                <div class="cls-hero" style="background:linear-gradient(90deg,#d1fae5 60%,transparent)"></div>
+                <div class="cls-blocks"><div class="cls-block"></div><div class="cls-block"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-phone">
+            <div class="card-phone-screen">
+              <div class="cps-inner"><div class="cps-block" style="background:#d1fae5"></div><div class="cps-block"></div><div class="cps-block" style="background:#a7f3d0"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-badge">Лендинг</span>
+            <span class="card-mobile-tag">ПК + Mobile</span>
+          </div>
+          <div class="card-title">Бухгалтерские услуги</div>
+          <div class="card-desc">Сайт для бухгалтерии ИП и ООО: услуги, тарифы, преимущества, заявка на консультацию.</div>
+          <div class="card-actions">
+            <button class="btn-demo" onclick="window.open('demos/accounting.html','_blank')">Открыть демо</button>
+            <button class="btn-order" onclick="orderSimilar('Лендинг — Бухгалтерские услуги')">Заказать похожий</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Мастер на час -->
+      <div class="portfolio-card reveal" data-category="services">
+        <div class="card-visual handyman">
+          <div class="card-laptop">
+            <div class="card-laptop-screen">
+              <div class="card-laptop-screen-inner">
+                <div class="cls-nav"></div>
+                <div class="cls-hero" style="background:linear-gradient(90deg,#fde68a 60%,transparent)"></div>
+                <div class="cls-blocks"><div class="cls-block"></div><div class="cls-block"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-phone">
+            <div class="card-phone-screen">
+              <div class="cps-inner"><div class="cps-block" style="background:#fde68a"></div><div class="cps-block"></div><div class="cps-block" style="background:#fcd34d"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-badge">Лендинг</span>
+            <span class="card-mobile-tag">ПК + Mobile</span>
+          </div>
+          <div class="card-title">Мастер на час</div>
+          <div class="card-desc">Быстрый сайт для бытовых услуг с кнопкой вызова мастера и срочным оффером.</div>
+          <div class="card-actions">
+            <button class="btn-demo" onclick="window.open('demos/handyman.html','_blank')">Открыть демо</button>
+            <button class="btn-order" onclick="orderSimilar('Лендинг — Мастер на час')">Заказать похожий</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Сантехника -->
+      <div class="portfolio-card reveal" data-category="services">
+        <div class="card-visual plumbing">
+          <div class="card-laptop">
+            <div class="card-laptop-screen">
+              <div class="card-laptop-screen-inner">
+                <div class="cls-nav"></div>
+                <div class="cls-hero" style="background:linear-gradient(90deg,#bfdbfe 60%,transparent)"></div>
+                <div class="cls-blocks"><div class="cls-block"></div><div class="cls-block"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-phone">
+            <div class="card-phone-screen">
+              <div class="cps-inner"><div class="cps-block" style="background:#bfdbfe"></div><div class="cps-block"></div><div class="cps-block" style="background:#93c5fd"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-badge">Сайт услуг</span>
+            <span class="card-mobile-tag">ПК + Mobile</span>
+          </div>
+          <div class="card-title">Сантехнические услуги</div>
+          <div class="card-desc">Лендинг для срочного вызова сантехника: 24/7, выезд, гарантия, заявка.</div>
+          <div class="card-actions">
+            <button class="btn-demo" onclick="window.open('demos/plumbing.html','_blank')">Открыть демо</button>
+            <button class="btn-order" onclick="orderSimilar('Сайт услуг — Сантехнические услуги')">Заказать похожий</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Стоматология -->
+      <div class="portfolio-card reveal" data-category="multi">
+        <div class="card-visual dental">
+          <div class="card-laptop">
+            <div class="card-laptop-screen">
+              <div class="card-laptop-screen-inner">
+                <div class="cls-nav"></div>
+                <div class="cls-hero" style="background:linear-gradient(90deg,#ede9fe 60%,transparent)"></div>
+                <div class="cls-blocks"><div class="cls-block"></div><div class="cls-block"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-phone">
+            <div class="card-phone-screen">
+              <div class="cps-inner"><div class="cps-block" style="background:#ede9fe"></div><div class="cps-block"></div><div class="cps-block" style="background:#c4b5fd"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-badge multi">Многостраничный</span>
+            <span class="card-mobile-tag">ПК + Mobile</span>
+          </div>
+          <div class="card-title">Стоматология</div>
+          <div class="card-desc">Пример сайта клиники с услугами, врачами, ценами и записью на приём.</div>
+          <div class="card-actions">
+            <button class="btn-demo" onclick="window.open('demos/dental.html','_blank')">Открыть демо</button>
+            <button class="btn-order" onclick="orderSimilar('Многостраничный — Стоматология')">Заказать похожий</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Интернет-магазин -->
+      <div class="portfolio-card reveal" data-category="shop">
+        <div class="card-visual store">
+          <div class="card-laptop">
+            <div class="card-laptop-screen">
+              <div class="card-laptop-screen-inner">
+                <div class="cls-nav"></div>
+                <div class="cls-hero" style="background:linear-gradient(90deg,#fecdd3 60%,transparent)"></div>
+                <div class="cls-blocks"><div class="cls-block"></div><div class="cls-block"></div><div class="cls-block"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-phone">
+            <div class="card-phone-screen">
+              <div class="cps-inner"><div class="cps-block" style="background:#fecdd3"></div><div class="cps-block"></div><div class="cps-block" style="background:#fda4af"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-badge shop">Интернет-магазин</span>
+            <span class="card-mobile-tag">ПК + Mobile</span>
+          </div>
+          <div class="card-title">Товары для дома</div>
+          <div class="card-desc">Витрина товаров с каталогом, карточками, преимуществами и заявкой.</div>
+          <div class="card-actions">
+            <button class="btn-demo" onclick="window.open('demos/home-store.html','_blank')">Открыть демо</button>
+            <button class="btn-order" onclick="orderSimilar('Интернет-магазин — Товары для дома')">Заказать похожий</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="portfolio-disclaimer reveal">Часть примеров — демонстрационные макеты, созданные для показа возможного формата сайта под разные ниши.</p>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section id="included">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Что входит в разработку</h2>
+      <p>Всё необходимое для запуска — от структуры до размещения</p>
+    </div>
+    <div class="included-grid">
+      <div class="included-item reveal">
+        <div class="included-icon">🏗️</div>
+        <h3>Структура сайта</h3>
+        <p>Блоки, оффер, путь клиента к заявке — выстраиваю под вашу нишу</p>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">📱</div>
+        <h3>Дизайн и адаптив</h3>
+        <p>Сайт выглядит нормально на ПК, планшете и телефоне</p>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">💻</div>
+        <h3>Чистый код</h3>
+        <p>Без привязки к конструкторам и ежемесячной подписке</p>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">✉️</div>
+        <h3>Формы заявок</h3>
+        <p>Telegram, WhatsApp или почта — выбираете удобный способ</p>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">🌐</div>
+        <h3>Домен и хостинг</h3>
+        <p>Помощь с выбором, подключением и размещением</p>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-icon">📊</div>
+        <h3>Яндекс.Метрика</h3>
+        <p>Счётчик и базовые цели для аналитики посещений</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IS IT FOR -->
+<section class="who" id="who">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Кому подойдёт</h2>
+      <p>Подходит для большинства малого и среднего бизнеса</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal">
+        <div class="who-icon">⚖️</div>
+        <h3>Услуги</h3>
+        <p>Юристы, бухгалтеры, мастера, ремонт, клиники</p>
+      </div>
+      <div class="who-card reveal">
+        <div class="who-icon">🎓</div>
+        <h3>Эксперты</h3>
+        <p>Наставники, консультанты, обучение</p>
+      </div>
+      <div class="who-card reveal">
+        <div class="who-icon">🏪</div>
+        <h3>Локальный бизнес</h3>
+        <p>Салоны, студии, сервисные центры</p>
+      </div>
+      <div class="who-card reveal">
+        <div class="who-icon">🛍️</div>
+        <h3>Товары</h3>
+        <p>Каталог, мини-магазин, бренд на маркетплейсе</p>
+      </div>
+      <div class="who-card reveal">
+        <div class="who-icon">🚀</div>
+        <h3>Старт бизнеса</h3>
+        <p>Быстро проверить нишу и начать собирать заявки</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFFS -->
+<section id="tariffs">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Тарифы</h2>
+      <p>Выберите формат, который подходит вашему проекту</p>
+    </div>
+    <div class="tariffs-grid">
+      <div class="tariff-card reveal">
+        <div class="tariff-name">Старт</div>
+        <div class="tariff-price">от 9 900 <span>₽</span></div>
+        <div class="tariff-desc">Сайт-визитка</div>
+        <ul class="tariff-features">
+          <li>1 экран + 3–5 блоков</li>
+          <li>Адаптив под мобильный</li>
+          <li>Кнопки Telegram/WhatsApp</li>
+          <li>Форма обратной связи</li>
+          <li>Базовое размещение</li>
+          <li>Срок от 2 дней</li>
+        </ul>
+        <button class="btn-secondary" onclick="orderSimilar('Сайт-визитка от 9 900 ₽')">Хочу сайт-визитку</button>
+      </div>
+
+      <div class="tariff-card popular reveal">
+        <div class="popular-badge">⭐ Популярный</div>
+        <div class="tariff-name">Лендинг</div>
+        <div class="tariff-price">от 19 900 <span>₽</span></div>
+        <div class="tariff-desc">Продающий лендинг</div>
+        <ul class="tariff-features">
+          <li>7–10 блоков</li>
+          <li>Структура под заявки</li>
+          <li>Дизайн под нишу</li>
+          <li>Адаптив и форма</li>
+          <li>Telegram/WhatsApp + Метрика</li>
+          <li>Помощь с доменом и хостингом</li>
+          <li>Срок 4–7 дней</li>
+        </ul>
+        <button class="btn-primary" onclick="orderSimilar('Продающий лендинг от 19 900 ₽')">Заказать лендинг</button>
+      </div>
+
+      <div class="tariff-card reveal">
+        <div class="tariff-name">Сайт услуг</div>
+        <div class="tariff-price">от 34 900 <span>₽</span></div>
+        <div class="tariff-desc">Многостраничный</div>
+        <ul class="tariff-features">
+          <li>3–5 страниц</li>
+          <li>Главная + услуги + контакты</li>
+          <li>Адаптив и формы</li>
+          <li>SEO-структура</li>
+          <li>Яндекс.Метрика</li>
+          <li>Размещение</li>
+          <li>Срок 7–14 дней</li>
+        </ul>
+        <button class="btn-secondary" onclick="orderSimilar('Сайт услуг / многостраничный от 34 900 ₽')">Обсудить сайт</button>
+      </div>
+
+      <div class="tariff-card reveal">
+        <div class="tariff-name">Магазин</div>
+        <div class="tariff-price">от 49 900 <span>₽</span></div>
+        <div class="tariff-desc">Каталог / мини-магазин</div>
+        <ul class="tariff-features">
+          <li>Главная + каталог</li>
+          <li>Карточки товаров</li>
+          <li>Корзина-заявка или форма</li>
+          <li>Адаптив</li>
+          <li>Базовая аналитика</li>
+          <li>Размещение</li>
+        </ul>
+        <button class="btn-secondary" onclick="orderSimilar('Каталог / мини-магазин от 49 900 ₽')">Рассчитать магазин</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison" id="comparison">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Почему сайт на коде выгоднее конструктора</h2>
+    </div>
+    <div class="compare-wrap">
+      <div class="compare-grid">
+        <div class="compare-col bad reveal">
+          <h3>❌ Конструктор (Tilda и др.)</h3>
+          <ul>
+            <li>Ежемесячная подписка</li>
+            <li>Ограничения платформы</li>
+            <li>Сложнее перенести сайт</li>
+            <li>Шаблонный внешний вид</li>
+            <li>Платные функции и тарифы</li>
+          </ul>
+        </div>
+        <div class="compare-col good reveal">
+          <h3>✅ Сайт на чистом коде</h3>
+          <ul>
+            <li>Нет подписки за конструктор</li>
+            <li>Файлы сайта принадлежат клиенту</li>
+            <li>Можно разместить на любом хостинге</li>
+            <li>Быстрая загрузка</li>
+            <li>Гибкая доработка</li>
+          </ul>
+        </div>
+      </div>
+      <p class="compare-disclaimer">* Домен и хостинг оплачиваются отдельно, но нет обязательной подписки за конструктор</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Как проходит работа</h2>
+      <p>Простой и понятный процесс от заявки до запуска</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">1</div>
+        <h3>Заявка</h3>
+        <p>Пишете, какой сайт нужен</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">2</div>
+        <h3>Бриф</h3>
+        <p>Уточняем нишу, услуги, цены, контакты и стиль</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">3</div>
+        <h3>Структура</h3>
+        <p>Собираем блоки сайта и оффер</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">4</div>
+        <h3>Дизайн и код</h3>
+        <p>Создаём адаптивный сайт</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">5</div>
+        <h3>Запуск</h3>
+        <p>Размещаем, подключаем формы, Метрику, проверяем</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">6</div>
+        <h3>Передача</h3>
+        <p>Получаете ссылку, файлы и доступы</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULT -->
+<section class="result" id="result">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Что получает клиент после запуска</h2>
+    </div>
+    <div class="result-grid">
+      <div class="result-item reveal"><div class="result-icon">🌐</div><div><h3>Готовый сайт</h3><p>По ссылке — можно сразу давать клиентам</p></div></div>
+      <div class="result-item reveal"><div class="result-icon">📱</div><div><h3>Адаптив</h3><p>Нормальный вид на телефоне и планшете</p></div></div>
+      <div class="result-item reveal"><div class="result-icon">✉️</div><div><h3>Заявки</h3><p>Telegram, WhatsApp или почта — как удобно</p></div></div>
+      <div class="result-item reveal"><div class="result-icon">📊</div><div><h3>Метрика</h3><p>Подключённая Яндекс.Метрика с базовыми целями</p></div></div>
+      <div class="result-item reveal"><div class="result-icon">🔍</div><div><h3>SEO-заголовки</h3><p>Базовая SEO-структура для поисковиков</p></div></div>
+      <div class="result-item reveal"><div class="result-icon">🏠</div><div><h3>Домен и хостинг</h3><p>Помощь с выбором и подключением</p></div></div>
+      <div class="result-item reveal"><div class="result-icon">💾</div><div><h3>Файлы сайта</h3><p>Исходники принадлежат вам</p></div></div>
+      <div class="result-item reveal"><div class="result-icon">📋</div><div><h3>Инструкция</h3><p>Короткий гайд — что делать дальше</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Это сайт на Tilda? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Нет. Сайт делается на чистом коде без обязательной подписки на конструктор. Вы получаете файлы, которые можно разместить на любом хостинге.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Мне нужно покупать домен и хостинг? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Да, домен и хостинг оплачиваются отдельно. Я помогу выбрать подходящий вариант и подключить всё под ключ.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно ли сделать сайт за 2–3 дня? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Да, если нужен простой сайт-визитка и у вас готовы тексты, фото и контакты. Для более сложных проектов — 4–14 дней.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно ли подключить заявки в Telegram? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Да, можно подключить отправку заявок в Telegram, WhatsApp или на почту — выберете удобный способ.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Можно ли потом доработать сайт? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Да, сайт можно расширять: добавлять страницы, блоки, каталог, квиз, аналитику и другие функции.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Это реальные кейсы? <span class="faq-icon">+</span></button>
+        <div class="faq-a">В портфолио могут быть демонстрационные макеты и реальные проекты. Демонстрационные примеры нужны, чтобы показать возможный формат сайта под разные ниши — это честно указано под блоком портфолио.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-header reveal">
+        <h2>Хотите сайт под ваш бизнес?</h2>
+        <p>Напишите, чем вы занимаетесь — подскажу, какой формат сайта подойдёт и сколько будет стоить запуск.</p>
+      </div>
+      <div class="contact-form reveal">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Ваше имя</label>
+              <input type="text" id="fname" placeholder="Иван" required>
+            </div>
+            <div class="form-group">
+              <label>Телефон или Telegram</label>
+              <input type="text" id="fcontact" placeholder="+7 900 000 00 00 или @username" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Ниша бизнеса</label>
+            <input type="text" id="fniche" placeholder="Например: юридические услуги, ремонт квартир..." required>
+          </div>
+          <div class="form-group">
+            <label>Какой сайт нужен</label>
+            <select id="ftype">
+              <option value="">Выберите тип сайта</option>
+              <option>Сайт-визитка от 9 900 ₽</option>
+              <option>Продающий лендинг от 19 900 ₽</option>
+              <option>Сайт услуг / многостраничный от 34 900 ₽</option>
+              <option>Каталог / мини-магазин от 49 900 ₽</option>
+              <option>Пока не знаю — нужна консультация</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Комментарий (необязательно)</label>
+            <textarea id="fcomment" placeholder="Расскажите подробнее — что продаёте, есть ли материалы, сроки..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Получить расчёт
+            </button>
+            <div class="form-or">или свяжитесь напрямую</div>
+            <div class="form-quick">
+              <a href="https://t.me/your_username" class="btn-tg" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.026 9.553c-.149.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.215-3.053 5.56-5.023c.242-.215-.054-.333-.373-.118L7.56 14.736l-2.963-.924c-.643-.203-.657-.643.136-.953l11.573-4.461c.536-.194 1.005.13.856.85z"/></svg>
+                Написать в Telegram
+              </a>
+              <a href="https://wa.me/79000000000" class="btn-wa" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Написать в WhatsApp
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Cloud<span>Code</span></div>
+      <div class="footer-links">
+        <a href="#portfolio">Примеры</a>
+        <a href="#tariffs">Цены</a>
+        <a href="#process">Процесс</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Контакт</a>
+      </div>
+      <div class="footer-copy">© 2025 CloudCode. Разработка сайтов под ключ</div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3>Рассчитать стоимость сайта</h3>
+    <p>Оставьте заявку — отвечу в течение 1–2 часов</p>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label>Имя</label>
+        <input type="text" placeholder="Как вас зовут?" required>
+      </div>
+      <div class="form-group">
+        <label>Телефон или Telegram</label>
+        <input type="text" id="mcontact" placeholder="+7 900 000 00 00 или @username" required>
+      </div>
+      <div class="form-group">
+        <label>Ниша бизнеса</label>
+        <input type="text" placeholder="Чем занимаетесь?" required>
+      </div>
+      <div class="form-group">
+        <label>Какой сайт нужен</label>
+        <select id="mtype">
+          <option value="">Выберите вариант</option>
+          <option>Сайт-визитка от 9 900 ₽</option>
+          <option>Продающий лендинг от 19 900 ₽</option>
+          <option>Сайт услуг / многостраничный от 34 900 ₽</option>
+          <option>Каталог / мини-магазин от 49 900 ₽</option>
+          <option>Пока не знаю — нужна консультация</option>
+        </select>
+      </div>
+      <div style="margin-top:8px">
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;height:52px">Отправить заявку</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

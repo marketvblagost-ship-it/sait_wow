@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мастер на час — Демо</title>
+  <link rel="stylesheet" href="demo-common.css">
+  <style>
+    :root{--primary:#D97706;--accent:#F59E0B;--bg:#FFFBEB;--text:#111827;--secondary:#6B7280;--border:#FDE68A;--font:'Inter','Segoe UI',Arial,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:var(--font);background:#fff;color:var(--text);line-height:1.6;}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px;}
+    h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.15;}
+    h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;}
+    h3{font-size:1.05rem;font-weight:700;}
+
+    .site-header{background:#1C1917;padding:16px 0;}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo{font-size:1.2rem;font-weight:800;color:#fff;}
+    .logo span{color:var(--accent);}
+    .phone-link{color:var(--accent);font-size:1.1rem;font-weight:700;text-decoration:none;}
+    .btn-urgent{background:var(--accent);color:#1C1917;border:none;border-radius:10px;padding:10px 20px;font-size:0.9rem;font-weight:700;cursor:pointer;transition:background 0.15s;}
+    .btn-urgent:hover{background:var(--primary);}
+
+    .hero{background:linear-gradient(135deg,#1C1917,#292524);color:#fff;padding:64px 0;}
+    .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+    .urgent-badge{display:inline-flex;align-items:center;gap:6px;background:#DC2626;color:#fff;border-radius:99px;padding:5px 14px;font-size:0.82rem;font-weight:700;margin-bottom:16px;animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,0.4);}50%{box-shadow:0 0 0 8px rgba(220,38,38,0);}}
+    .hero h1{margin-bottom:14px;}
+    .hero h1 em{font-style:normal;color:var(--accent);}
+    .hero-sub{color:#A8A29E;font-size:1rem;margin-bottom:28px;max-width:460px;}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+    .btn-primary{background:var(--accent);color:#1C1917;border:none;border-radius:12px;height:54px;padding:0 28px;font-size:1rem;font-weight:700;cursor:pointer;transition:background 0.15s;display:inline-flex;align-items:center;gap:8px;}
+    .btn-primary:hover{background:var(--primary);}
+    .btn-outline{background:rgba(255,255,255,0.08);color:#fff;border:1.5px solid rgba(255,255,255,0.2);border-radius:12px;height:54px;padding:0 24px;font-size:0.95rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;}
+    .btn-outline:hover{background:rgba(255,255,255,0.15);}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .stat-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px;text-align:center;}
+    .stat-num{font-size:1.5rem;font-weight:800;color:var(--accent);}
+    .stat-label{font-size:0.82rem;color:#A8A29E;margin-top:2px;}
+
+    .services{padding:72px 0;}
+    .section-header{text-align:center;margin-bottom:40px;}
+    .section-header h2{margin-bottom:10px;}
+    .section-header p{color:var(--secondary);max-width:500px;margin:0 auto;}
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+    .service-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;transition:box-shadow 0.2s;}
+    .service-card:hover{box-shadow:0 6px 20px rgba(217,119,6,0.15);}
+    .service-icon{font-size:2rem;margin-bottom:8px;}
+    .service-price{color:var(--primary);font-weight:700;font-size:0.88rem;margin-top:6px;}
+
+    .how{padding:72px 0;background:var(--bg);}
+    .how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+    .how-step{text-align:center;}
+    .how-num{width:48px;height:48px;background:var(--accent);color:#1C1917;border-radius:50%;font-size:1.2rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+    .how-step h3{font-size:0.95rem;margin-bottom:4px;}
+    .how-step p{font-size:0.84rem;color:var(--secondary);}
+
+    .pricing{padding:72px 0;background:#fff;}
+    .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:760px;margin:0 auto;}
+    .price-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:28px;}
+    .price-title{font-size:1rem;font-weight:700;margin-bottom:4px;}
+    .price-from{font-size:1.8rem;font-weight:800;color:var(--primary);margin-bottom:12px;}
+    .price-inc{list-style:none;margin-bottom:20px;}
+    .price-inc li{font-size:0.88rem;padding:5px 0;border-bottom:1px solid #FEF3C7;display:flex;gap:8px;}
+    .price-inc li::before{content:"🔧";flex-shrink:0;}
+    .order-btn{width:100%;height:46px;background:var(--accent);color:#1C1917;border:none;border-radius:10px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:background 0.15s;}
+    .order-btn:hover{background:var(--primary);}
+
+    .reviews{padding:72px 0;background:var(--bg);}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .review-card{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:20px;}
+    .review-stars{color:var(--accent);margin-bottom:8px;}
+    .review-text{font-size:0.88rem;color:var(--secondary);margin-bottom:10px;}
+    .review-author{font-size:0.86rem;font-weight:600;}
+
+    .cta-section{padding:64px 0;background:var(--accent);}
+    .cta-inner{text-align:center;max-width:600px;margin:0 auto;}
+    .cta-inner h2{color:#1C1917;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:10px;}
+    .cta-inner p{color:#78350F;margin-bottom:28px;}
+    .cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+    .btn-dark{background:#1C1917;color:#fff;border:none;border-radius:12px;height:54px;padding:0 28px;font-size:1rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background 0.15s;}
+    .btn-dark:hover{background:#2C2725;}
+    .btn-wa{background:#25D366;color:#fff;border:none;border-radius:12px;height:54px;padding:0 24px;font-size:0.95rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;}
+    .btn-wa:hover{background:#1ebe58;}
+
+    footer{background:#1C1917;color:#78716C;padding:28px 0;}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+    .footer-logo{font-size:1rem;font-weight:800;color:#fff;}
+    .footer-logo span{color:var(--accent);}
+
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;}
+      .services-grid{grid-template-columns:repeat(2,1fr);}
+      .how-steps{grid-template-columns:repeat(2,1fr);}
+      .reviews-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:640px){
+      .pricing-grid{grid-template-columns:1fr;}
+      .services-grid{grid-template-columns:repeat(2,1fr);}
+    }
+  </style>
+</head>
+<body>
+<div class="demo-panel">
+  <span class="demo-panel-text">Это демонстрационный пример сайта</span>
+  <div class="demo-panel-actions">
+    <a href="../index.html#portfolio" class="demo-back">← Вернуться к портфолио</a>
+    <button class="demo-order" onclick="demoToast()">Заказать похожий</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">Мастер<span>24</span></div>
+      <a href="tel:+79001234567" class="phone-link">+7 900 123-45-67</a>
+      <button class="btn-urgent" onclick="demoToast()">Вызвать мастера</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <span class="urgent-badge">🔴 Работаем 24/7</span>
+        <h1>Мастер на час — <em>выезд за 30 минут</em></h1>
+        <p class="hero-sub">Устраняем бытовые неполадки быстро и с гарантией. Сборка мебели, установка техники, мелкий ремонт.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="demoToast()">🔧 Вызвать мастера</button>
+          <button class="btn-outline" onclick="demoToast()">Смотреть услуги</button>
+        </div>
+        <p style="color:#A8A29E;font-size:0.85rem;">Работаем без выходных. Первый час от 900 ₽</p>
+      </div>
+      <div>
+        <div class="hero-stats">
+          <div class="stat-card"><div class="stat-num">30 мин</div><div class="stat-label">выезд мастера</div></div>
+          <div class="stat-card"><div class="stat-num">500+</div><div class="stat-label">выполнено заявок</div></div>
+          <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">без выходных</div></div>
+          <div class="stat-card"><div class="stat-num">5 лет</div><div class="stat-label">на рынке</div></div>
+          <div class="stat-card"><div class="stat-num">1 год</div><div class="stat-label">гарантия работ</div></div>
+          <div class="stat-card"><div class="stat-num">4.9 ★</div><div class="stat-label">средняя оценка</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="section-header"><h2>Наши услуги</h2><p>Всё для дома — быстро и качественно</p></div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">🛋️</div><h3>Сборка мебели</h3><p>IKEA, любые производители</p><div class="service-price">от 800 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🔌</div><h3>Электрика</h3><p>Розетки, выключатели, люстры</p><div class="service-price">от 600 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🚿</div><h3>Сантехника</h3><p>Кран, смеситель, унитаз</p><div class="service-price">от 700 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🖼️</div><h3>Картины и зеркала</h3><p>Повеска, монтаж</p><div class="service-price">от 400 ₽</div></div>
+      <div class="service-card"><div class="service-icon">📺</div><h3>Монтаж ТВ</h3><p>Настенное крепление</p><div class="service-price">от 1 200 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🔑</div><h3>Замки и двери</h3><p>Установка, ремонт</p><div class="service-price">от 900 ₽</div></div>
+      <div class="service-card"><div class="service-icon">🧱</div><h3>Мелкий ремонт</h3><p>Шпатлёвка, покраска</p><div class="service-price">от 1 000 ₽</div></div>
+      <div class="service-card"><div class="service-icon">📦</div><h3>Помощь при переезде</h3><p>Разборка/сборка мебели</p><div class="service-price">от 1 500 ₽</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <div class="section-header"><h2>Как заказать</h2><p>4 простых шага</p></div>
+    <div class="how-steps">
+      <div class="how-step"><div class="how-num">1</div><h3>Заявка</h3><p>Звоните или пишите в WhatsApp/Telegram</p></div>
+      <div class="how-step"><div class="how-num">2</div><h3>Уточнение</h3><p>Скажите адрес и что нужно сделать</p></div>
+      <div class="how-step"><div class="how-num">3</div><h3>Выезд</h3><p>Мастер приедет за 30–60 минут</p></div>
+      <div class="how-step"><div class="how-num">4</div><h3>Готово</h3><p>Оплата после выполнения работы</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="container">
+    <div class="section-header"><h2>Стоимость работ</h2><p>Оплата после выполнения. Смета до начала работ</p></div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-title">Почасовая оплата</div>
+        <div class="price-from">от 900 ₽/час</div>
+        <ul class="price-inc"><li>Минимальный заказ 1 час</li><li>Материалы оплачиваются отдельно</li><li>Инструмент у мастера свой</li><li>Гарантия 30 дней</li></ul>
+        <button class="order-btn" onclick="demoToast()">Вызвать мастера</button>
+      </div>
+      <div class="price-card">
+        <div class="price-title">Фиксированная цена</div>
+        <div class="price-from">по договорённости</div>
+        <ul class="price-inc"><li>Сборка мебели — от 800 ₽</li><li>Установка розетки — от 600 ₽</li><li>Монтаж ТВ — от 1 200 ₽</li><li>Установка карниза — от 400 ₽</li></ul>
+        <button class="order-btn" onclick="demoToast()">Получить смету</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="section-header"><h2>Отзывы</h2></div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Вызвала мастера собрать шкаф. Приехал через 40 минут, собрал за час. Аккуратно, без мусора.</div><div class="review-author">Марина К., Москва</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Починил кран и повесил 4 картины. Быстро, цена честная, инструмент свой. Возьму телефон на будущее.</div><div class="review-author">Андрей Н., Москва</div></div>
+      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Повесил телевизор на стену и провёл кабели. Работает хорошо, стена цела. Рекомендую.</div><div class="review-author">Дмитрий Л., МО</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Нужен мастер прямо сейчас?</h2>
+      <p>Звоните или пишите — выезд в течение 30–60 минут по Москве и МО</p>
+      <div class="cta-actions">
+        <button class="btn-dark" onclick="demoToast()">📞 Позвонить</button>
+        <button class="btn-wa" onclick="demoToast()">WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">Мастер<span>24</span></div>
+      <div>© 2025 Мастер24 — демонстрационный макет</div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Это демо-макет. Чтобы заказать похожий сайт, вернитесь на основной лендинг.</div>
+<script>function demoToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}</script>
+</body>
+</html>
