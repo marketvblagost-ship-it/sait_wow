@@ -1,130 +1,129 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Бухгалтерские услуги — Демо</title>
-  <link rel="stylesheet" href="demo-common.css">
-  <style>
-    :root{--primary:#16A34A;--accent:#059669;--bg:#F0FDF4;--text:#111827;--secondary:#6B7280;--border:#D1FAE5;--font:'Inter','Segoe UI',Arial,sans-serif;}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:var(--font);background:#fff;color:var(--text);line-height:1.6;}
-    .container{max-width:1100px;margin:0 auto;padding:0 24px;}
-    h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.15;}
-    h2{font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;}
-    h3{font-size:1.05rem;font-weight:700;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>БухПроф — Бухгалтерские услуги для ИП и ООО</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#16A34A;--dark-green:#14532D;--light:#F0FDF4;--text:#111827;--gray:#6B7280}
+body{font-family:'Manrope',sans-serif;background:#fff;color:var(--text)}
+a{text-decoration:none;color:inherit}
 
-    .site-header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:52px;z-index:50;}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
-    .logo{font-size:1.2rem;font-weight:800;color:var(--primary);}
-    .logo span{color:var(--text);}
-    .nav{display:flex;gap:24px;}
-    .nav a{color:var(--secondary);font-size:0.9rem;text-decoration:none;transition:color 0.15s;}
-    .nav a:hover{color:var(--primary);}
-    .btn-cta{background:var(--primary);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:0.9rem;font-weight:600;cursor:pointer;transition:background 0.15s;}
-    .btn-cta:hover{background:var(--accent);}
+.demo-bar{background:#14532D;color:#fff;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;font-size:13px;position:sticky;top:0;z-index:999}
+.demo-bar-left{opacity:.75}
+.demo-bar-right{display:flex;gap:10px}
+.demo-bar a{border-radius:6px;padding:6px 14px;font-weight:600;font-size:12px}
+.demo-bar a.back{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff}
+.demo-bar a.order{background:#16A34A;color:#fff}
 
-    .hero{background:linear-gradient(135deg,#F0FDF4,#ECFDF5);padding:64px 0;}
-    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;}
-    .hero-label{display:inline-flex;align-items:center;gap:6px;background:#D1FAE5;color:var(--primary);border-radius:99px;padding:5px 14px;font-size:0.82rem;font-weight:600;margin-bottom:16px;}
-    .hero h1{margin-bottom:14px;}
-    .hero-sub{color:var(--secondary);font-size:1rem;margin-bottom:28px;max-width:440px;}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
-    .btn-primary{background:var(--primary);color:#fff;border:none;border-radius:12px;height:52px;padding:0 24px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:background 0.15s;display:inline-flex;align-items:center;gap:8px;}
-    .btn-primary:hover{background:var(--accent);}
-    .btn-secondary{background:#fff;color:var(--text);border:1.5px solid #D1FAE5;border-radius:12px;height:52px;padding:0 24px;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.15s;display:inline-flex;align-items:center;}
-    .btn-secondary:hover{background:#F0FDF4;}
-    .hero-benefits{display:flex;flex-wrap:wrap;gap:8px;}
-    .benefit-tag{background:#fff;border:1px solid #D1FAE5;border-radius:99px;padding:5px 12px;font-size:0.82rem;font-weight:500;color:var(--text);display:flex;align-items:center;gap:5px;}
-    .benefit-tag::before{content:"✓";color:var(--primary);font-weight:700;}
-    .hero-card{background:#fff;border:1px solid #D1FAE5;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(0,0,0,0.06);}
-    .hero-card-icon{font-size:2.5rem;margin-bottom:10px;}
-    .hero-card h3{margin-bottom:6px;}
-    .hero-card p{font-size:0.88rem;color:var(--secondary);margin-bottom:16px;}
-    .hero-card-badge{background:#D1FAE5;color:var(--primary);border-radius:99px;padding:4px 12px;font-size:0.8rem;font-weight:600;display:inline-block;}
+header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 0;position:sticky;top:41px;z-index:100}
+.container{max-width:1100px;margin:0 auto;padding:0 32px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;font-weight:800;color:var(--green)}
+.logo span{color:#111}
+nav a{color:var(--gray);font-size:14px;font-weight:500;margin-left:28px;transition:.2s}
+nav a:hover{color:var(--green)}
+.header-phone{font-size:14px;font-weight:700;color:var(--text)}
+.btn-main{background:var(--green);color:#fff;border:none;border-radius:8px;padding:10px 22px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
 
-    .services{padding:72px 0;}
-    .section-header{text-align:center;margin-bottom:40px;}
-    .section-header h2{margin-bottom:10px;}
-    .section-header p{color:var(--secondary);max-width:500px;margin:0 auto;font-size:0.95rem;}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-    .service-card{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:16px;padding:24px;transition:box-shadow 0.2s;}
-    .service-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.07);}
-    .service-icon{font-size:1.8rem;margin-bottom:10px;}
-    .service-card h3{margin-bottom:6px;}
-    .service-card p{font-size:0.86rem;color:var(--secondary);}
+/* Hero */
+.hero{background:linear-gradient(135deg,#ECFDF5 0%,#F0FDF4 100%);padding:80px 0;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:0;top:0;width:45%;height:100%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='300' cy='200' r='180' fill='rgba(22,163,74,0.06)'/%3E%3Ccircle cx='350' cy='100' r='80' fill='rgba(22,163,74,0.04)'/%3E%3C/svg%3E") no-repeat center;pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#DCFCE7;color:var(--dark-green);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:700;margin-bottom:24px}
+.hero h1{font-size:48px;font-weight:800;line-height:1.1;margin-bottom:20px;color:#111}
+.hero h1 span{color:var(--green)}
+.hero-sub{font-size:16px;color:var(--gray);line-height:1.65;margin-bottom:32px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-green{background:var(--green);color:#fff;border:none;border-radius:10px;padding:14px 28px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn-green:hover{background:#15803D}
+.btn-white{background:#fff;color:#111;border:1.5px solid #D1D5DB;border-radius:10px;padding:14px 28px;font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn-white:hover{border-color:var(--green);color:var(--green)}
 
-    .tariffs{padding:72px 0;background:var(--bg);}
-    .tariffs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-    .tariff-card{background:#fff;border:1.5px solid #D1FAE5;border-radius:16px;padding:28px;position:relative;transition:box-shadow 0.2s;}
-    .tariff-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);}
-    .tariff-card.popular{border-color:var(--primary);box-shadow:0 4px 20px rgba(22,163,74,0.15);}
-    .pop-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#F59E0B;color:#fff;border-radius:99px;padding:3px 14px;font-size:0.78rem;font-weight:700;white-space:nowrap;}
-    .tariff-name{font-size:0.85rem;font-weight:600;color:var(--secondary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
-    .tariff-price{font-size:1.7rem;font-weight:800;margin-bottom:4px;}
-    .tariff-period{font-size:0.82rem;color:var(--secondary);margin-bottom:14px;}
-    .tariff-features{list-style:none;margin-bottom:18px;}
-    .tariff-features li{font-size:0.87rem;padding:5px 0;border-bottom:1px solid #F3F4F6;display:flex;gap:7px;}
-    .tariff-features li::before{content:"✓";color:var(--primary);font-weight:700;flex-shrink:0;}
-    .t-btn{width:100%;height:44px;border:none;border-radius:10px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.15s;}
-    .t-btn.primary{background:var(--primary);color:#fff;}
-    .t-btn.primary:hover{background:var(--accent);}
-    .t-btn.secondary{background:#fff;color:var(--text);border:1.5px solid #D1FAE5;}
-    .t-btn.secondary:hover{background:var(--bg);}
+/* Stats panel */
+.stats-panel{background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 32px rgba(0,0,0,.08);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.stat-item{text-align:center;padding:16px;border-radius:12px;background:var(--light)}
+.stat-num{font-size:32px;font-weight:800;color:var(--green)}
+.stat-label{font-size:12px;color:var(--gray);margin-top:4px}
 
-    .reviews{padding:72px 0;background:#fff;}
-    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-    .review-card{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:16px;padding:24px;}
-    .review-stars{color:#F59E0B;margin-bottom:8px;}
-    .review-text{font-size:0.9rem;color:var(--secondary);margin-bottom:12px;line-height:1.6;}
-    .review-author{font-size:0.88rem;font-weight:600;}
-    .review-role{font-size:0.8rem;color:var(--secondary);}
+/* Features */
+.features{padding:80px 0;background:#fff}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.feat-card{background:var(--light);border-radius:16px;padding:28px;border:1px solid #D1FAE5;transition:.25s}
+.feat-card:hover{box-shadow:0 8px 32px rgba(22,163,74,.12);transform:translateY(-3px)}
+.feat-icon{width:52px;height:52px;border-radius:14px;background:#DCFCE7;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
+.feat-card h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.feat-card p{font-size:14px;color:var(--gray);line-height:1.6}
 
-    .cta-section{padding:64px 0;background:var(--primary);}
-    .cta-inner{max-width:560px;margin:0 auto;text-align:center;}
-    .cta-inner h2{color:#fff;margin-bottom:10px;}
-    .cta-inner p{color:#BBF7D0;margin-bottom:28px;}
-    .cta-form{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:28px;text-align:left;}
-    .form-group{margin-bottom:12px;}
-    .form-group label{display:block;color:#BBF7D0;font-size:0.84rem;font-weight:600;margin-bottom:4px;}
-    .form-group input,.form-group select{width:100%;padding:10px 14px;background:rgba(255,255,255,0.1);border:1.5px solid rgba(255,255,255,0.2);border-radius:10px;color:#fff;font-size:0.9rem;outline:none;font-family:inherit;}
-    .form-group input::placeholder{color:rgba(255,255,255,0.5);}
-    .form-group input:focus,.form-group select:focus{border-color:#4ADE80;}
-    .form-group select option{background:#16A34A;color:#fff;}
-    .submit-btn{width:100%;height:48px;background:#fff;color:var(--primary);border:none;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer;margin-top:8px;transition:all 0.15s;}
-    .submit-btn:hover{background:#F0FDF4;}
+/* Pricing */
+.pricing{padding:80px 0;background:#F9FAFB}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.price-card{background:#fff;border-radius:20px;padding:32px;border:1.5px solid #E5E7EB;position:relative;transition:.25s}
+.price-card:hover{border-color:var(--green);box-shadow:0 8px 32px rgba(22,163,74,.1)}
+.price-card.popular{border-color:var(--green);box-shadow:0 4px 24px rgba(22,163,74,.15)}
+.popular-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;border-radius:99px;padding:4px 16px;font-size:12px;font-weight:700;white-space:nowrap}
+.price-name{font-size:14px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+.price-amount{font-size:36px;font-weight:800;color:#111;margin-bottom:4px}
+.price-amount span{font-size:16px;font-weight:500;color:var(--gray)}
+.price-desc{font-size:13px;color:var(--gray);margin-bottom:24px}
+.price-features{list-style:none;margin-bottom:28px}
+.price-features li{font-size:14px;padding:7px 0;border-bottom:1px solid #F3F4F6;display:flex;gap:8px}
+.price-features li::before{content:"✓";color:var(--green);font-weight:700;flex-shrink:0}
+.btn-price{width:100%;border:none;border-radius:10px;padding:13px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn-price.green{background:var(--green);color:#fff}
+.btn-price.outline{background:#fff;color:#111;border:1.5px solid #D1D5DB}
+.btn-price.outline:hover{border-color:var(--green);color:var(--green)}
 
-    footer{background:#111827;color:#9CA3AF;padding:28px 0;}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-    .footer-logo{font-size:1rem;font-weight:800;color:#fff;}
-    .footer-logo span{color:#4ADE80;}
+/* CTA */
+.cta{padding:80px 0;background:var(--green)}
+.cta-inner{text-align:center;max-width:600px;margin:0 auto}
+.cta h2{font-size:40px;font-weight:800;color:#fff;margin-bottom:16px}
+.cta p{font-size:16px;color:rgba(255,255,255,.8);margin-bottom:36px}
+.cta-form{display:flex;gap:12px;justify-content:center}
+.cta-input{flex:1;max-width:300px;background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.4);border-radius:10px;padding:14px 18px;color:#fff;font-size:15px;font-family:inherit;outline:none}
+.cta-input::placeholder{color:rgba(255,255,255,.6)}
+.btn-white-solid{background:#fff;color:var(--green);border:none;border-radius:10px;padding:14px 28px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
 
-    @media(max-width:900px){
-      .hero-inner{grid-template-columns:1fr;}
-      .hero-card{display:none;}
-      .services-grid{grid-template-columns:repeat(2,1fr);}
-      .tariffs-grid{grid-template-columns:1fr;}
-      .reviews-grid{grid-template-columns:1fr;}
-      .nav{display:none;}
-    }
-    @media(max-width:640px){.services-grid{grid-template-columns:1fr;}}
-  </style>
+footer{background:#111827;color:rgba(255,255,255,.5);padding:32px 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-size:18px;font-weight:800;color:#fff}
+.footer-logo span{color:var(--green)}
+
+@media(max-width:768px){
+  .hero-inner,.pricing-grid,.features-grid{grid-template-columns:1fr}
+  .hero h1{font-size:32px}
+  .stats-panel{display:none}
+  nav{display:none}
+  .cta-form{flex-direction:column;align-items:center}
+}
+</style>
 </head>
 <body>
-<div class="demo-panel">
-  <span class="demo-panel-text">Это демонстрационный пример сайта</span>
-  <div class="demo-panel-actions">
-    <a href="../index.html#portfolio" class="demo-back">← Вернуться к портфолио</a>
-    <button class="demo-order" onclick="demoToast()">Заказать похожий</button>
+
+<div class="demo-bar">
+  <span class="demo-bar-left">Демонстрационный пример сайта</span>
+  <div class="demo-bar-right">
+    <a href="../index.html#portfolio" class="back">← Портфолио</a>
+    <a href="../index.html#contact" onclick="return demoToast()" class="order">Заказать похожий</a>
   </div>
 </div>
 
-<header class="site-header">
+<header>
   <div class="container">
     <div class="header-inner">
-      <div class="logo">Бухгалтер<span>Про</span></div>
-      <nav class="nav"><a href="#">Услуги</a><a href="#">Тарифы</a><a href="#">О нас</a><a href="#">Контакты</a></nav>
-      <button class="btn-cta" onclick="demoToast()">Получить консультацию</button>
+      <div class="logo">Бух<span>Проф</span></div>
+      <nav>
+        <a href="#">Услуги</a>
+        <a href="#">Тарифы</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:20px">
+        <div class="header-phone">+7 800 555-01-44</div>
+        <button class="btn-main" onclick="demoToast()">Заявка</button>
+      </div>
     </div>
   </div>
 </header>
@@ -133,105 +132,126 @@
   <div class="container">
     <div class="hero-inner">
       <div>
-        <span class="hero-label">🧮 Бухгалтерские услуги для ИП и ООО</span>
-        <h1>Бухгалтерия под ключ — без штрафов и головной боли</h1>
-        <p class="hero-sub">Ведём учёт, сдаём отчётность и общаемся с налоговой за вас. Работаем удалённо по всей России.</p>
-        <div class="hero-actions">
-          <button class="btn-primary" onclick="demoToast()">Получить консультацию</button>
-          <button class="btn-secondary" onclick="demoToast()">Смотреть тарифы</button>
-        </div>
-        <div class="hero-benefits">
-          <span class="benefit-tag">Без штрафов от ФНС</span>
-          <span class="benefit-tag">Удалённо</span>
-          <span class="benefit-tag">Фиксированная цена</span>
-          <span class="benefit-tag">Электронная отчётность</span>
+        <div class="hero-badge">📊 Бухгалтерия для бизнеса</div>
+        <h1>Ведение бухгалтерии<br>для <span>ИП и ООО</span></h1>
+        <p class="hero-sub">Сдаём отчётность в срок. Фиксированная стоимость. 0 штрафов у наших клиентов за 7 лет работы.</p>
+        <div class="hero-btns">
+          <button class="btn-green" onclick="demoToast()">Получить расчёт стоимости</button>
+          <button class="btn-white" onclick="demoToast()">Тарифы →</button>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="hero-card-icon">📊</div>
-        <h3>Первый месяц — бесплатно</h3>
-        <p>Попробуйте наш сервис без риска: ведём учёт и сдаём отчёт, вы оцениваете результат</p>
-        <span class="hero-card-badge">Акция для новых клиентов</span>
+      <div>
+        <div class="stats-panel">
+          <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">лет на рынке</div></div>
+          <div class="stat-item"><div class="stat-num">250+</div><div class="stat-label">клиентов</div></div>
+          <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">штрафов</div></div>
+          <div class="stat-item"><div class="stat-num">24ч</div><div class="stat-label">ответ на вопрос</div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="services">
+<section class="features">
   <div class="container">
-    <div class="section-header"><h2>Что мы делаем</h2><p>Полное бухгалтерское обслуживание для малого бизнеса</p></div>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">📋</div><h3>Бухгалтерский учёт</h3><p>Проведение первичных документов, ведение книги учёта, расчёт налогов</p></div>
-      <div class="service-card"><div class="service-icon">📤</div><h3>Налоговая отчётность</h3><p>Сдаём все виды деклараций и отчётов вовремя и без ошибок</p></div>
-      <div class="service-card"><div class="service-icon">👷</div><h3>Зарплата и кадры</h3><p>Расчёт зарплат, больничных, отпускных. Кадровое делопроизводство</p></div>
-      <div class="service-card"><div class="service-icon">🏦</div><h3>Работа с банками</h3><p>Подготовка документов для банков, кредитования и валютного контроля</p></div>
-      <div class="service-card"><div class="service-icon">🔍</div><h3>Налоговый аудит</h3><p>Проверим вашу отчётность до прихода налоговой. Найдём и исправим ошибки</p></div>
-      <div class="service-card"><div class="service-icon">🤝</div><h3>Консультации</h3><p>Ответим на вопросы по налогам, ведению бизнеса и оптимизации расходов</p></div>
+    <div class="section-tag" style="display:inline-block;background:#DCFCE7;color:#14532D;border-radius:99px;padding:5px 16px;font-size:13px;font-weight:700;margin-bottom:16px">Что входит</div>
+    <h2 style="font-size:38px;font-weight:800;color:#111;margin-bottom:12px">Полное бухгалтерское<br>сопровождение</h2>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon">📄</div>
+        <h3>Ведение учёта</h3>
+        <p>Первичная документация, книга учёта, расчёт налогов. УСН, ОСНО, патент.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📊</div>
+        <h3>Сдача отчётности</h3>
+        <p>Декларации, отчёты в ФНС, ПФР, ФСС — сдаём вовремя и без ошибок.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">💰</div>
+        <h3>Расчёт зарплаты</h3>
+        <p>Зарплата, отпускные, больничные, НДФЛ и взносы — всё под ключ.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🔍</div>
+        <h3>Налоговые консультации</h3>
+        <p>Помогаем законно снизить налоговую нагрузку и избежать штрафов.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🏦</div>
+        <h3>Банковские операции</h3>
+        <p>Платёжные поручения, сверки с банком, валютные операции.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">⚡</div>
+        <h3>Регистрация и ликвидация</h3>
+        <p>Регистрация ООО и ИП, внесение изменений, ликвидация — быстро и без отказов.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="tariffs">
+<section class="pricing">
   <div class="container">
-    <div class="section-header"><h2>Тарифы</h2><p>Фиксированная стоимость без скрытых платежей</p></div>
-    <div class="tariffs-grid">
-      <div class="tariff-card">
-        <div class="tariff-name">ИП УСН</div>
-        <div class="tariff-price">2 500 ₽</div>
-        <div class="tariff-period">в месяц</div>
-        <ul class="tariff-features">
-          <li>Учёт доходов/расходов</li><li>Декларация УСН</li><li>Нулевая отчётность</li><li>Консультации</li>
+    <div style="text-align:center;margin-bottom:0">
+      <h2 style="font-size:38px;font-weight:800;color:#111;margin-bottom:12px">Тарифы</h2>
+      <p style="font-size:16px;color:#6B7280">Фиксированная цена. Никаких скрытых платежей.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">ИП / УСН</div>
+        <div class="price-amount">2 900 <span>₽/мес</span></div>
+        <div class="price-desc">Для ИП на упрощённой системе</div>
+        <ul class="price-features">
+          <li>До 30 операций в месяц</li>
+          <li>Декларация УСН</li>
+          <li>Отчёты в ПФР и ФСС</li>
+          <li>Книга учёта доходов</li>
+          <li>Поддержка по телефону</li>
         </ul>
-        <button class="t-btn secondary" onclick="demoToast()">Выбрать тариф</button>
+        <button class="btn-price outline" onclick="demoToast()">Выбрать тариф</button>
       </div>
-      <div class="tariff-card popular">
-        <div class="pop-badge">⭐ Популярный</div>
-        <div class="tariff-name">ООО до 50 операций</div>
-        <div class="tariff-price">7 500 ₽</div>
-        <div class="tariff-period">в месяц</div>
-        <ul class="tariff-features">
-          <li>Полный учёт</li><li>Вся отчётность</li><li>Расчёт зарплат до 5 чел</li><li>Сверка с ФНС</li><li>Консультации без лимита</li>
+      <div class="price-card popular">
+        <div class="popular-label">Популярный</div>
+        <div class="price-name">ООО / УСН</div>
+        <div class="price-amount">5 900 <span>₽/мес</span></div>
+        <div class="price-desc">Для ООО на упрощённой системе</div>
+        <ul class="price-features">
+          <li>До 100 операций</li>
+          <li>Полная отчётность</li>
+          <li>Расчёт зарплаты до 5 чел.</li>
+          <li>Кадровые документы</li>
+          <li>Поддержка 24/7</li>
+          <li>Личный бухгалтер</li>
         </ul>
-        <button class="t-btn primary" onclick="demoToast()">Выбрать тариф</button>
+        <button class="btn-price green" onclick="demoToast()">Выбрать тариф</button>
       </div>
-      <div class="tariff-card">
-        <div class="tariff-name">ООО до 200 операций</div>
-        <div class="tariff-price">15 000 ₽</div>
-        <div class="tariff-period">в месяц</div>
-        <ul class="tariff-features">
-          <li>Полный учёт</li><li>Вся отчётность</li><li>Зарплата до 15 чел</li><li>Валютные операции</li><li>Персональный бухгалтер</li>
+      <div class="price-card">
+        <div class="price-name">ООО / ОСНО</div>
+        <div class="price-amount">9 900 <span>₽/мес</span></div>
+        <div class="price-desc">Полное сопровождение ОСНО</div>
+        <ul class="price-features">
+          <li>Неограниченные операции</li>
+          <li>НДС, налог на прибыль</li>
+          <li>Зарплата до 15 чел.</li>
+          <li>Налоговый аудит</li>
+          <li>Представительство в ФНС</li>
+          <li>Личный бухгалтер + юрист</li>
         </ul>
-        <button class="t-btn secondary" onclick="demoToast()">Выбрать тариф</button>
+        <button class="btn-price outline" onclick="demoToast()">Выбрать тариф</button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="reviews">
-  <div class="container">
-    <div class="section-header"><h2>Отзывы клиентов</h2></div>
-    <div class="reviews-grid">
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Работаем уже 2 года. Ни одного штрафа от налоговой. Всегда на связи, всё объясняют понятно.</div><div class="review-author">Михаил О.</div><div class="review-role">ИП, строительство</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Перешли от другого бухгалтера — разница огромная. Документы в порядке, отчёты сдаются вовремя.</div><div class="review-author">ООО "АльфаТрейд"</div><div class="review-role">Торговая компания</div></div>
-      <div class="review-card"><div class="review-stars">★★★★★</div><div class="review-text">Перед проверкой ФНС навели порядок в документах за 3 дня. Проверка прошла без замечаний.</div><div class="review-author">Ирина В.</div><div class="review-role">ИП, розничная торговля</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
+<section class="cta">
   <div class="container">
     <div class="cta-inner">
-      <h2>Оставьте заявку на консультацию</h2>
-      <p>Бесплатно разберём вашу ситуацию и предложим подходящий тариф</p>
+      <h2>Готовы передать<br>бухгалтерию нам?</h2>
+      <p>Оставьте номер — рассчитаем стоимость за 15 минут и проведём бесплатный аудит вашей бухгалтерии</p>
       <div class="cta-form">
-        <form onsubmit="demoToast();return false;">
-          <div class="form-group"><label>Имя</label><input type="text" placeholder="Ваше имя"></div>
-          <div class="form-group"><label>Телефон</label><input type="tel" placeholder="+7 900 000 00 00"></div>
-          <div class="form-group"><label>Форма бизнеса</label>
-            <select><option>ИП на УСН</option><option>ООО на УСН</option><option>ООО на ОСНО</option><option>Пока нет — только открываюсь</option></select>
-          </div>
-          <button type="submit" class="submit-btn">Получить бесплатную консультацию</button>
-        </form>
+        <input class="cta-input" type="tel" placeholder="+7 900 000 00 00">
+        <button class="btn-white-solid" onclick="demoToast()">Рассчитать</button>
       </div>
     </div>
   </div>
@@ -240,13 +260,22 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">Бухгалтер<span>Про</span></div>
-      <div>© 2025 БухгалтерПро — демонстрационный макет</div>
+      <div class="footer-logo">Бух<span>Проф</span></div>
+      <div>ИП Иванова А.В. · ОГРНИП 123456789012345</div>
+      <div>© 2026 БухПроф. Демо-сайт</div>
     </div>
   </div>
 </footer>
 
-<div class="toast" id="toast">Это демо-макет. Чтобы заказать похожий сайт, вернитесь на основной лендинг.</div>
-<script>function demoToast(){const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500);}</script>
+<div id="toast" style="position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:#14532D;color:#fff;padding:14px 24px;border-radius:12px;font-size:14px;font-weight:500;z-index:9999;transition:.3s;opacity:0;max-width:360px;text-align:center"></div>
+<script>
+function demoToast(){
+  var t=document.getElementById('toast');
+  t.textContent='Это демо-макет. Чтобы заказать похожий сайт, перейдите на основной лендинг.';
+  t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';
+  setTimeout(function(){t.style.opacity='0';t.style.transform='translateX(-50%) translateY(80px)'},3500);
+  return false;
+}
+</script>
 </body>
 </html>
