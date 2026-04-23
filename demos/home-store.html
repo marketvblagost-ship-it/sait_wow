@@ -1,1 +1,89 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HomeNest</title><style>:root{--blue:#2563EB}*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:#111827;background:#fff}a{text-decoration:none;color:inherit}.demo-bar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:12px;background:#111827;color:#fff;padding:12px 5vw}.demo-bar div{display:flex;gap:10px}.demo-bar a,.demo-bar button{background:#fff;color:#111;border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}.wrap{padding:0 6vw}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.nav b{font-size:24px}.nav span{margin-left:20px;color:#4B5563;font-weight:700}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;padding:70px 6vw}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1;margin:0 0 20px;letter-spacing:-.04em}.hero p{font-size:20px;line-height:1.6;color:#4B5563}.btn{display:inline-flex;background:var(--blue);color:#fff;border:0;border-radius:14px;padding:17px 24px;font-weight:900;cursor:pointer}.visual{min-height:360px;border-radius:34px;box-shadow:0 30px 80px rgba(15,23,42,.16);overflow:hidden;position:relative}.section{padding:70px 6vw}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #E5E7EB;border-radius:24px;padding:24px;box-shadow:0 14px 40px rgba(15,23,42,.07)}.card h3{margin-top:0}.muted{color:#6B7280;line-height:1.6}.price{font-size:28px;font-weight:900}.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.trust div{border-radius:22px;padding:24px;background:#F8FAFC}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:820px}.form input,.form textarea{padding:16px;border:1px solid #D1D5DB;border-radius:14px;font:inherit}.form textarea{grid-column:1/-1;min-height:110px}.footer{padding:32px 6vw;background:#111827;color:#CBD5E1}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(120px);background:#111;color:#fff;padding:14px 18px;border-radius:14px;transition:.25s}.toast.show{transform:translateX(-50%) translateY(0)}@media(max-width:800px){.hero,.form{grid-template-columns:1fr}.grid,.trust{grid-template-columns:1fr}.demo-bar{align-items:flex-start;flex-direction:column}.nav span{display:none}}</style><style>.btn{background:#B45309}.hero{background:#FFF7ED}.visual{background:linear-gradient(135deg,#FEF3C7,#FFF7ED)}.v-home{height:100%;position:relative}.product{position:absolute;width:180px;height:180px;background:#D97706;border-radius:34px;right:56px;top:50px;box-shadow:-120px 100px 0 #fff}.product.small{width:110px;height:110px;background:#FBBF24;left:60px;top:70px;box-shadow:none}.tag{position:absolute;left:34px;bottom:34px;background:white;border-radius:18px;padding:18px;font-weight:900}.alt{background:#FFFBEB}</style></head><body><div class="demo-bar"><strong>Демонстрационный пример сайта</strong><div><a href="../index.html#portfolio">Вернуться к портфолио</a><button class="demo-action">Заказать похожий</button></div></div><header class="nav wrap"><b>HomeNest</b><nav><span>Услуги</span><span>Цены</span><span>Отзывы</span><span>Контакты</span></nav></header><section class="hero"><div><h1>Товары для дома и уюта</h1><p>Каталог, доставка, оплата и удобный заказ. Светлый магазин для красивых полезных товаров.</p><button class="btn demo-action">Перейти в каталог</button></div><div class="visual"><div class="v-home"><div class="product"></div><div class="product small"></div><div class="tag">Каталог товаров</div></div></div></section><section class="section"><h2>Услуги и преимущества</h2><div class="grid"><div class="card"><h3>Каталог</h3><p class="muted">Удобные разделы и карточки товаров.</p></div><div class="card"><h3>Доставка</h3><p class="muted">Понятные условия и быстрый заказ.</p></div><div class="card"><h3>Оплата</h3><p class="muted">Простая форма покупки.</p></div></div></section><section class="section alt"><h2>Форматы работы</h2><div class="grid"><div class="card"><h3>Текстиль</h3><div class="price">от 690 ₽</div><p class="muted">Товары для спальни и кухни.</p></div><div class="card"><h3>Декор</h3><div class="price">от 490 ₽</div><p class="muted">Уютные детали для дома.</p></div><div class="card"><h3>Наборы</h3><div class="price">от 1 990 ₽</div><p class="muted">Готовые комплекты.</p></div></div></section><section class="section"><h2>Почему нам доверяют</h2><div class="trust"><div><b>10+ лет</b><p class="muted">опыта</p></div><div><b>420+</b><p class="muted">обращений</p></div><div><b>24/7</b><p class="muted">поддержка</p></div><div><b>Гарантия</b><p class="muted">на работу</p></div></div></section><section class="section"><h2>Оставьте заявку</h2><p class="muted">Это форма-заглушка для демонстрационного макета.</p><form class="form"><input placeholder="Имя"><input placeholder="Телефон"><textarea placeholder="Комментарий"></textarea><button class="btn demo-action" type="button">Отправить</button></form></section><footer class="footer">HomeNest — демонстрационный сайт</footer><div class="toast" id="toast">Это демонстрационный макет. Чтобы заказать похожий сайт, вернитесь на основной лендинг.</div><script>document.querySelectorAll('.demo-action').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500)}));</script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Home Store</title>
+  <meta name="description" content="Каталог, доставка, оплата и удобный заказ. Светлый e-commerce-визуал с карточками товаров, понятными акциями и мягкой атмосферой домашнего пространства.">
+  <link rel="stylesheet" href="../assets/demo.css">
+  <style>:root{--accent:#c78d55;--accent-2:#8b5cf6;--bg:#fff9f2;}</style>
+</head>
+<body>
+  <header class="demo-header">
+    <div class="container inner">
+      <a class="brand" href="../index.html#portfolio"><span class="brand-mark">H</span><span>Maison Home Store</span></a>
+      <nav class="demo-nav"><a href="#services">Услуги</a><a href="#formats">Форматы</a><a href="#trust">Доверие</a><a href="#contact">Контакты</a></nav>
+      <a class="btn btn-secondary" href="#contact">Получить консультацию</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Домашний уют · декор · хранение</span>
+          <h1>Товары для дома и уюта</h1>
+          <p>Каталог, доставка, оплата и удобный заказ. Светлый e-commerce-визуал с карточками товаров, понятными акциями и мягкой атмосферой домашнего пространства.</p>
+          <div class="checks"><span>Каталог и корзина</span><span>Быстрая доставка</span><span>Подборки для дома</span></div>
+          <div class="hero-actions"><a class="btn btn-primary" href="#contact">Перейти в каталог</a><a class="btn btn-secondary" href="#formats">Посмотреть форматы</a></div>
+          <div class="stats-row"><div class="stat"><strong>500+</strong><span>товаров в каталоге и сезонных коллекциях</span></div><div class="stat"><strong>1–2 дня</strong><span>средний срок отправки заказа</span></div><div class="stat"><strong>4.9</strong><span>оценка покупателей по качеству сервиса</span></div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="glow" style="width:320px;height:320px;background:rgba(37,99,235,.18);top:18px;right:30px;"></div>
+          <div class="glow" style="width:260px;height:260px;background:rgba(124,58,237,.14);left:28px;bottom:28px;"></div>
+          <div class="panel hero-panel"><div class="illustration-shell" style="background:linear-gradient(180deg,#fff7ed,#f8f1ea);">
+         <div class="mini-banner"><strong>Новая коллекция для дома</strong><span style="color:#6b5b52;">Тёплая палитра, карточки товаров и e-commerce-подача без перегруза.</span></div>
+         <div class="product-grid" style="margin-top:14px;">
+           <div class="product-card"><div class="product-thumb"><svg viewBox="0 0 200 150" width="100%" height="100%"><rect x="32" y="56" width="136" height="56" rx="28" fill="#e7c9ab"/><rect x="48" y="42" width="104" height="24" rx="12" fill="#f3decb"/><circle cx="64" cy="90" r="10" fill="#fff5eb"/></svg></div><strong>Диванная подушка</strong><p style="margin:8px 0 0;">1 290 ₽</p></div>
+           <div class="product-card"><div class="product-thumb"><svg viewBox="0 0 200 150" width="100%" height="100%"><rect x="70" y="34" width="60" height="82" rx="16" fill="#d7b28c"/><rect x="86" y="18" width="28" height="24" rx="12" fill="#f3decb"/><circle cx="100" cy="80" r="16" fill="#fff5eb"/></svg></div><strong>Арома-свеча</strong><p style="margin:8px 0 0;">890 ₽</p></div>
+           <div class="product-card"><div class="product-thumb"><svg viewBox="0 0 200 150" width="100%" height="100%"><rect x="48" y="44" width="104" height="74" rx="18" fill="#d8c0aa"/><rect x="60" y="56" width="80" height="24" rx="12" fill="#f7e9da"/></svg></div><strong>Корзина для хранения</strong><p style="margin:8px 0 0;">1 590 ₽</p></div>
+         </div>
+       </div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Как должен выглядеть e-commerce-demo</h2>
+        <p class="lead">У магазина важны уютная атмосфера, понятные карточки, цены, подборки и ощущение, что с телефона заказывать так же удобно, как с компьютера.</p>
+        <div class="grid-3"><article class="card"><div class="icon-badge">🛋️</div><h3>Декор и текстиль</h3><p>Пледы, свечи, корзины, вазы и детали, которые делают дом уютнее.</p></article><article class="card"><div class="icon-badge">📦</div><h3>Хранение и порядок</h3><p>Органайзеры, коробки, корзины и аксессуары для удобного быта.</p></article><article class="card"><div class="icon-badge">🎁</div><h3>Подарочные наборы</h3><p>Собранные решения для дома и подарков с красивой подачей.</p></article></div>
+      </div>
+    </section>
+    <section class="section" id="formats">
+      <div class="container">
+        <h2>Форматы работы и стоимость</h2>
+        <p class="lead">Подбираем формат под задачу: быстрый запуск, комплексное сопровождение или приоритетный формат с персональным менеджером.</p>
+        <div class="pricing"><article class="price-card "><span class="tag">Базовый заказ</span><div class="price">от 1 290 ₽</div><h3>Небольшие покупки</h3><p>Для единичных товаров и быстрых заказов.</p><ul><li>Онлайн-оплата</li><li>Доставка по городу</li><li>Подтверждение заказа</li></ul></article><article class="price-card featured"><span class="tag">Лучший выбор</span><div class="price">от 3 990 ₽</div><h3>Наборы и подборки</h3><p>Когда нужно собрать уютный комплект для дома или подарка.</p><ul><li>Сеты товаров</li><li>Скидка на набор</li><li>Быстрая доставка</li></ul></article><article class="price-card "><span class="tag">Премиум подбор</span><div class="price">индивидуально</div><h3>Для интерьеров и подарков</h3><p>Если нужно собрать подборку под стиль, сезон или бюджет.</p><ul><li>Персональный подбор</li><li>Комплекты</li><li>Упаковка</li></ul></article></div>
+      </div>
+    </section>
+    <section class="section" id="trust">
+      <div class="container quote">
+        <div class="review-card">
+          <span class="tag">Доверие и результат</span>
+          <h2 style="font-size:clamp(34px,4vw,46px);margin-top:16px;">Почему клиенты выбирают нас</h2>
+          <p class="lead" style="margin-bottom:18px;">Для интернет-магазина важны не просто карточки товаров, а атмосфера, понятный каталог и ощущение, что выбрать и заказать будет легко даже с телефона.</p>
+          <div class="list"><div class="row"><div class="icon-badge" style="width:42px;height:42px;border-radius:14px;font-size:18px;">🛒</div><div><strong>Каталог без перегруза</strong><p style="margin:6px 0 0;">Товары, цены и категории считываются сразу и не теряются в визуальном шуме.</p></div></div><div class="row"><div class="icon-badge" style="width:42px;height:42px;border-radius:14px;font-size:18px;">🤎</div><div><strong>Атмосфера бренда</strong><p style="margin:6px 0 0;">Тёплая палитра и подача создают ощущение ухоженного магазина, а не шаблонного каталога.</p></div></div><div class="row"><div class="icon-badge" style="width:42px;height:42px;border-radius:14px;font-size:18px;">📱</div><div><strong>Mobile-first поведение</strong><p style="margin:6px 0 0;">Карточки и CTA выглядят аккуратно и понятно даже в мобильном формате.</p></div></div></div>
+        </div>
+        <div class="cta-card" id="contact">
+          <span class="tag">Запись / заявка</span>
+          <h2 style="font-size:clamp(30px,4vw,42px);margin-top:16px;">Перейти в каталог</h2>
+          <p class="lead" style="font-size:16px;margin-bottom:16px;">Оставьте контакт — поможем подобрать товары, уточнить наличие и собрать заказ под ваш запрос.</p>
+          <div class="form-box">
+            <input class="input" placeholder="Ваше имя">
+            <input class="input" placeholder="Телефон или Telegram">
+            <textarea class="input textarea" placeholder="Опишите задачу"></textarea>
+            <button class="btn btn-primary" type="button">Отправить заявку</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2>Уютный demo-магазин для товаров для дома</h2>
+        <p class="lead">Эта demo-страница сделана как пример того, как может выглядеть сайт под вашу нишу на desktop и mobile, с продуманным первым экраном, услугами, доверием и формой заявки.</p>
+        <div class="grid-3"><article class="card"><div class="icon-badge">🛒</div><h3>Каталог без перегруза</h3><p>Товары, цены и категории считываются сразу и не теряются в визуальном шуме.</p></article><article class="card"><div class="icon-badge">🤎</div><h3>Атмосфера бренда</h3><p>Тёплая палитра и подача создают ощущение ухоженного магазина, а не шаблонного каталога.</p></article><article class="card"><div class="icon-badge">📱</div><h3>Mobile-first поведение</h3><p>Карточки и CTA выглядят аккуратно и понятно даже в мобильном формате.</p></article></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container inner"><div><strong>Maison Home Store</strong><br><span>Demo-страница для портфолио</span></div><a href="../index.html#portfolio">← Вернуться к портфолио</a></div></footer>
+</body>
+</html>

@@ -1,1 +1,93 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AquaHelp</title><style>:root{--blue:#2563EB}*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:#111827;background:#fff}a{text-decoration:none;color:inherit}.demo-bar{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:12px;background:#111827;color:#fff;padding:12px 5vw}.demo-bar div{display:flex;gap:10px}.demo-bar a,.demo-bar button{background:#fff;color:#111;border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer}.wrap{padding:0 6vw}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.nav b{font-size:24px}.nav span{margin-left:20px;color:#4B5563;font-weight:700}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;padding:70px 6vw}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1;margin:0 0 20px;letter-spacing:-.04em}.hero p{font-size:20px;line-height:1.6;color:#4B5563}.btn{display:inline-flex;background:var(--blue);color:#fff;border:0;border-radius:14px;padding:17px 24px;font-weight:900;cursor:pointer}.visual{min-height:360px;border-radius:34px;box-shadow:0 30px 80px rgba(15,23,42,.16);overflow:hidden;position:relative}.section{padding:70px 6vw}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #E5E7EB;border-radius:24px;padding:24px;box-shadow:0 14px 40px rgba(15,23,42,.07)}.card h3{margin-top:0}.muted{color:#6B7280;line-height:1.6}.price{font-size:28px;font-weight:900}.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.trust div{border-radius:22px;padding:24px;background:#F8FAFC}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:820px}.form input,.form textarea{padding:16px;border:1px solid #D1D5DB;border-radius:14px;font:inherit}.form textarea{grid-column:1/-1;min-height:110px}.footer{padding:32px 6vw;background:#111827;color:#CBD5E1}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(120px);background:#111;color:#fff;padding:14px 18px;border-radius:14px;transition:.25s}.toast.show{transform:translateX(-50%) translateY(0)}@media(max-width:800px){.hero,.form{grid-template-columns:1fr}.grid,.trust{grid-template-columns:1fr}.demo-bar{align-items:flex-start;flex-direction:column}.nav span{display:none}}</style><style>.btn{background:#DC2626}.hero{background:#EFF6FF}.visual{background:linear-gradient(135deg,#082F49,#0F172A)}.v-plum{height:100%;position:relative}.drop{position:absolute;width:170px;height:220px;border-radius:80px 80px 90px 90px;background:#38BDF8;right:56px;top:50px;filter:drop-shadow(0 20px 40px #0005)}.alert{position:absolute;left:34px;bottom:34px;background:#DC2626;color:#fff;border-radius:18px;padding:18px;font-weight:900}.alt{background:#EFF6FF}</style></head><body><div class="demo-bar"><strong>Демонстрационный пример сайта</strong><div><a href="../index.html#portfolio">Вернуться к портфолио</a><button class="demo-action">Заказать похожий</button></div></div><header class="nav wrap"><b>AquaHelp</b><nav><span>Услуги</span><span>Цены</span><span>Отзывы</span><span>Контакты</span></nav></header><section class="hero"><div><h1>Сантехник 24/7 без выходных</h1><p>Устраним протечку, засор и заменим сантехнику. Выезд за 30 минут, гарантия на работу.</p><button class="btn demo-action">Вызвать сантехника</button></div><div class="visual"><div class="v-plum"><div class="drop"></div><div class="alert">Аварийный выезд 24/7</div></div></div></section><section class="section"><h2>Услуги и преимущества</h2><div class="grid"><div class="card"><h3>Аварийный выезд</h3><p class="muted">Быстро приезжаем при протечке.</p></div><div class="card"><h3>Засоры</h3><p class="muted">Прочистка труб и канализации.</p></div><div class="card"><h3>Установка</h3><p class="muted">Смесители, унитазы, раковины.</p></div></div></section><section class="section alt"><h2>Форматы работы</h2><div class="grid"><div class="card"><h3>Диагностика</h3><div class="price">от 1 000 ₽</div><p class="muted">Осмотр и оценка работ.</p></div><div class="card"><h3>Ремонт</h3><div class="price">от 2 500 ₽</div><p class="muted">Устранение неисправности.</p></div><div class="card"><h3>Замена</h3><div class="price">от 4 500 ₽</div><p class="muted">Монтаж сантехники.</p></div></div></section><section class="section"><h2>Почему нам доверяют</h2><div class="trust"><div><b>10+ лет</b><p class="muted">опыта</p></div><div><b>420+</b><p class="muted">обращений</p></div><div><b>24/7</b><p class="muted">поддержка</p></div><div><b>Гарантия</b><p class="muted">на работу</p></div></div></section><section class="section"><h2>Оставьте заявку</h2><p class="muted">Это форма-заглушка для демонстрационного макета.</p><form class="form"><input placeholder="Имя"><input placeholder="Телефон"><textarea placeholder="Комментарий"></textarea><button class="btn demo-action" type="button">Отправить</button></form></section><footer class="footer">AquaHelp — демонстрационный сайт</footer><div class="toast" id="toast">Это демонстрационный макет. Чтобы заказать похожий сайт, вернитесь на основной лендинг.</div><script>document.querySelectorAll('.demo-action').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500)}));</script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AquaFix 24/7</title>
+  <meta name="description" content="Устраним протечку, засор и заменим сантехнику. Быстро выезжаем по городу, фиксируем стоимость и даём гарантию на работы.">
+  <link rel="stylesheet" href="../assets/demo.css">
+  <style>:root{--accent:#c43d32;--accent-2:#1d4ed8;--bg:#eef3fb;}</style>
+</head>
+<body>
+  <header class="demo-header">
+    <div class="container inner">
+      <a class="brand" href="../index.html#portfolio"><span class="brand-mark">A</span><span>AquaFix 24/7</span></a>
+      <nav class="demo-nav"><a href="#services">Услуги</a><a href="#formats">Форматы</a><a href="#trust">Доверие</a><a href="#contact">Контакты</a></nav>
+      <a class="btn btn-secondary" href="#contact">Получить консультацию</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Аварийный сервис · 24/7 · выезд за 30 минут</span>
+          <h1>Сантехник 24/7 без выходных</h1>
+          <p>Устраним протечку, засор и заменим сантехнику. Быстро выезжаем по городу, фиксируем стоимость и даём гарантию на работы.</p>
+          <div class="checks"><span>Аварийный выезд 24/7</span><span>Выезд за 30 минут</span><span>Гарантия на работы</span></div>
+          <div class="hero-actions"><a class="btn btn-primary" href="#contact">Вызвать сантехника</a><a class="btn btn-secondary" href="#formats">Посмотреть форматы</a></div>
+          <div class="stats-row"><div class="stat"><strong>30 минут</strong><span>среднее время выезда по заявке</span></div><div class="stat"><strong>24/7</strong><span>принимаем звонки и срочные обращения</span></div><div class="stat"><strong>12 месяцев</strong><span>гарантия на основные работы</span></div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="glow" style="width:320px;height:320px;background:rgba(37,99,235,.18);top:18px;right:30px;"></div>
+          <div class="glow" style="width:260px;height:260px;background:rgba(124,58,237,.14);left:28px;bottom:28px;"></div>
+          <div class="panel hero-panel"><div class="illustration-shell" style="background:linear-gradient(180deg,#102248,#1d3557);color:#fff;">
+         <div class="dashboard">
+           <div class="mini-banner" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;"><strong>Срочный выезд и гарантия</strong><span style="color:rgba(255,255,255,.7);">Сайт сразу доносит скорость реакции, надёжность и формат помощи 24/7.</span></div>
+           <svg viewBox="0 0 500 260" style="width:100%;height:100%;">
+             <rect x="16" y="20" width="468" height="220" rx="30" fill="rgba(255,255,255,.08)"/>
+             <path d="M138 52v116c0 28 22 50 50 50s50-22 50-50V52" stroke="#93c5fd" stroke-width="20" stroke-linecap="round" fill="none"/>
+             <circle cx="354" cy="106" r="48" fill="#fecaca"/>
+             <path d="M354 72v40l28 18" stroke="#b91c1c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+             <rect x="88" y="186" width="320" height="14" rx="7" fill="#fca5a5"/>
+           </svg>
+         </div>
+       </div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Как считывается ниша на первом экране</h2>
+        <p class="lead">Синий фон, красный CTA, аварийные триггеры, вода и сервисный визуал сразу делают нишу понятной даже без чтения подписи.</p>
+        <div class="grid-3"><article class="card"><div class="icon-badge">💧</div><h3>Устранение протечек</h3><p>Срочно перекрываем проблему, находим слабое место и устраняем течь.</p></article><article class="card"><div class="icon-badge">🌀</div><h3>Прочистка засоров</h3><p>Кухня, ванная, стояк и канализация — приезжаем с нужным инструментом.</p></article><article class="card"><div class="icon-badge">🔩</div><h3>Замена сантехники</h3><p>Смесители, сифоны, инсталляции, унитазы и подключение оборудования.</p></article></div>
+      </div>
+    </section>
+    <section class="section" id="formats">
+      <div class="container">
+        <h2>Форматы работы и стоимость</h2>
+        <p class="lead">Подбираем формат под задачу: быстрый запуск, комплексное сопровождение или приоритетный формат с персональным менеджером.</p>
+        <div class="pricing"><article class="price-card "><span class="tag">Срочный вызов</span><div class="price">от 2 000 ₽</div><h3>Аварийная заявка</h3><p>Когда нужно приехать быстро и решить проблему сразу.</p><ul><li>Выезд мастера</li><li>Диагностика</li><li>Работы по ситуации</li></ul></article><article class="price-card featured"><span class="tag">Плановый сервис</span><div class="price">от 4 500 ₽</div><h3>Замена и монтаж</h3><p>Подходит для установки оборудования и неаварийных работ.</p><ul><li>Подбор решений</li><li>Монтаж</li><li>Проверка после работ</li></ul></article><article class="price-card "><span class="tag">Обслуживание</span><div class="price">индивидуально</div><h3>Для объектов и бизнеса</h3><p>Когда нужен регулярный сантехнический контроль на объекте.</p><ul><li>Плановые выезды</li><li>Техосмотр</li><li>Приоритетная линия</li></ul></article></div>
+      </div>
+    </section>
+    <section class="section" id="trust">
+      <div class="container quote">
+        <div class="review-card">
+          <span class="tag">Доверие и результат</span>
+          <h2 style="font-size:clamp(34px,4vw,46px);margin-top:16px;">Почему клиенты выбирают нас</h2>
+          <p class="lead" style="margin-bottom:18px;">В нише сантехники работает честный, уверенный визуал: срочность, надёжность, читаемый CTA и быстрый способ оставить заявку без перегруза.</p>
+          <div class="list"><div class="row"><div class="icon-badge" style="width:42px;height:42px;border-radius:14px;font-size:18px;">🚨</div><div><strong>Срочность</strong><p style="margin:6px 0 0;">Пользователь сразу понимает: сюда можно обратиться прямо сейчас.</p></div></div><div class="row"><div class="icon-badge" style="width:42px;height:42px;border-radius:14px;font-size:18px;">🧯</div><div><strong>Надёжность</strong><p style="margin:6px 0 0;">Показываем гарантию, скорость и понятный перечень работ.</p></div></div><div class="row"><div class="icon-badge" style="width:42px;height:42px;border-radius:14px;font-size:18px;">📞</div><div><strong>Ясный следующий шаг</strong><p style="margin:6px 0 0;">Форма и CTA подходят под аварийные обращения.</p></div></div></div>
+        </div>
+        <div class="cta-card" id="contact">
+          <span class="tag">Запись / заявка</span>
+          <h2 style="font-size:clamp(30px,4vw,42px);margin-top:16px;">Вызвать сантехника</h2>
+          <p class="lead" style="font-size:16px;margin-bottom:16px;">Опишите проблему: протечка, засор, замена смесителя, подключение или аварийная ситуация.</p>
+          <div class="form-box">
+            <input class="input" placeholder="Ваше имя">
+            <input class="input" placeholder="Телефон или Telegram">
+            <textarea class="input textarea" placeholder="Опишите задачу"></textarea>
+            <button class="btn btn-primary" type="button">Отправить заявку</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2>Сильный лендинг для сантехнических услуг</h2>
+        <p class="lead">Эта demo-страница сделана как пример того, как может выглядеть сайт под вашу нишу на desktop и mobile, с продуманным первым экраном, услугами, доверием и формой заявки.</p>
+        <div class="grid-3"><article class="card"><div class="icon-badge">🚨</div><h3>Срочность</h3><p>Пользователь сразу понимает: сюда можно обратиться прямо сейчас.</p></article><article class="card"><div class="icon-badge">🧯</div><h3>Надёжность</h3><p>Показываем гарантию, скорость и понятный перечень работ.</p></article><article class="card"><div class="icon-badge">📞</div><h3>Ясный следующий шаг</h3><p>Форма и CTA подходят под аварийные обращения.</p></article></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container inner"><div><strong>AquaFix 24/7</strong><br><span>Demo-страница для портфолио</span></div><a href="../index.html#portfolio">← Вернуться к портфолио</a></div></footer>
+</body>
+</html>
