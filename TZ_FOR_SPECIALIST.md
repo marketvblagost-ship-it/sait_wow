@@ -70,3 +70,20 @@ assets/hero/hero-mockup.png
 - `<noscript>` — сразу после открывающего `<body>`.
 
 Это сделано, чтобы код загружался раньше и HTML оставался корректным.
+
+
+## Иконка сайта / favicon
+Иконки сайта лежат в папке:
+
+```text
+assets/favicon/
+```
+
+В `index.html` внутри `<head>` прописаны:
+- `favicon.ico`
+- `favicon-16x16.png`
+- `favicon-32x32.png`
+- `favicon-192x192.png`
+- `apple-touch-icon.png`
+
+После загрузки на GitHub Pages может потребоваться обновить страницу через `Ctrl + F5`, потому что favicon часто кэшируется браузером.
