@@ -3,18 +3,19 @@
 <head>
   <!-- BotFAQtor -->
   <script type="text/javascript">window._ab_id_=171183;</script>
-  <script src="https://cdn.botfaqtor.ru/one.js"></script>
+  <script src="https://cdn.botfaqtor.ru/one.js" async></script>
   <!-- /BotFAQtor -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AmalSite — сайты и лендинги от 7 000 ₽ на коде</title>
-  <meta name="description" content="Создание сайтов и лендингов для услуг и товаров от 7 000 ₽. На коде, без конструктора и ежемесячной подписки. Макет до оплаты, адаптив, Яндекс.Метрика и цели.">
+  <title>AmalSite — сайт-лендинг на коде за 4 499 ₽ до 10 мая</title>
+  <meta name="description" content="Сайт-лендинг на коде за 4 499 ₽ до 10 мая. Без конструктора и подписки. Макет до оплаты, адаптив, форма заявки, Яндекс.Метрика, цели и размещение на хостинге.">
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="preload" href="assets/hero/hero-mockup.webp" as="image">
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -31,7 +32,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,14 +42,12 @@
     <div class="container header-inner">
       <a href="#top" class="logo">Amal<span>Site</span></a>
       <nav class="nav" aria-label="Основное меню">
+        <a href="#code">Почему на коде</a>
         <a href="#included">Что входит</a>
-        <a href="#portfolio">Портфолио</a>
-        <a href="#benefits">Преимущества</a>
-        <a href="#process">Этапы</a>
+        <a href="#portfolio">Примеры</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="header-btn" href="#contacts" data-ym-goals="get_mockup">Получить макет</a>
-      <button class="menu-btn" type="button" aria-label="Открыть меню">☰</button>
+      <button class="header-btn js-open-quiz" type="button" data-quiz-source="header">Получить макет</button>
     </div>
   </header>
 
@@ -56,63 +55,90 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Лендинги под заявки — без конструктора и подписки</div>
-          <h1>
-            Сайт для услуг и товаров,<br>
-            который <span class="premium-pill">выглядит дорого</span><br>
-            и <span class="gold">приводит заявки</span>
-          </h1>
-          <p class="hero-text"><strong>От 7 000 ₽ — на коде, без конструктора и ежемесячной подписки.</strong> Сначала показываю макет, после согласования собираю сайт и запускаю его на хостинге.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#contacts" data-ym-goals="get_mockup">Получить макет</a>
-            <a class="btn secondary" href="https://t.me/AmalTarget" target="_blank" rel="noopener" data-ym-goals="click_telegram">Написать в Telegram</a>
+          <div class="eyebrow">Акция до 10 мая · макет до оплаты</div>
+          <h1>Сайт-лендинг на коде</h1>
+          <p class="hero-text">Сделаю одностраничный сайт для услуги или товара: без конструктора, без подписки, с адаптивом, кнопками связи, Яндекс.Метрикой и целями для рекламы.</p>
+          <div class="hero-offer" aria-label="Стоимость">
+            <div class="hero-old-price">
+              <span>обычно</span>
+              <s>9 000 ₽</s>
+            </div>
+            <div class="hero-new-price">
+              <span>акция до 10 мая</span>
+              <strong>4 499 ₽</strong>
+            </div>
           </div>
+          <div class="hero-actions">
+            <button class="btn primary js-open-quiz" type="button" data-quiz-source="hero">Получить макет за 30 секунд</button>
+            <a class="btn secondary" href="#portfolio">Посмотреть примеры</a>
+          </div>
+          <p class="hero-microcopy">Имя не нужно — в квизе оставите только Telegram или телефон.</p>
           <div class="chips">
             <span>Макет до оплаты</span>
             <span>Без подписки</span>
-            <span>На чистом коде</span>
-            <span>Метрика и цели входят</span>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-label="Премиальный сайт на ноутбуке и смартфоне">
-          <div class="hero-glow"></div>
-          <div class="floating-badges">
             <span>HTML / CSS / JS</span>
-            <span>SEO-база</span>
-            <span>UX + заявки</span>
-            <span>Яндекс.Метрика</span>
+            <span>Метрика и цели входят</span>
+            <span>Размещение входит</span>
           </div>
-          <img src="assets/hero/hero-mockup.png" alt="Премиальный сайт психолога на ноутбуке и смартфоне" class="hero-device">
         </div>
-      </div>
 
-      <div class="container">
-        <div class="stats-strip">
-          <div><strong>10 ниш</strong><span>Примеры для услуг, медицины, ремонта и магазинов</span></div>
-          <div><strong>Макет</strong><span>Сначала смотрите будущий сайт</span></div>
-          <div><strong>Адаптив</strong><span>Сайт удобно смотрится на смартфоне</span></div>
-          <div><strong>0 ₽</strong><span>За конструктор и ежемесячную подписку</span></div>
-          <div><strong>Входит</strong><span>Яндекс.Метрика, цели и размещение</span></div>
+        <div class="hero-visual" aria-label="Пример сайта на ноутбуке и смартфоне">
+          <div class="sale-card">
+            <small>спеццена</small>
+            <s>9 000 ₽</s>
+            <strong>4 499 ₽</strong>
+            <span>до 10 мая</span>
+          </div>
+          <img src="assets/hero/hero-mockup.webp" alt="Премиальный лендинг на ноутбуке и смартфоне" class="hero-device" fetchpriority="high">
         </div>
       </div>
     </section>
 
-    <section id="included" class="section">
+    <section id="code" class="section code-section">
       <div class="container">
         <div class="section-head">
-          <span>Что входит</span>
-          <h2>Что входит в сайт от 7 000 ₽</h2>
-          <p>Сразу закладываю структуру, адаптив, быстрые контакты, аналитику и запуск на хостинге — чтобы сайт можно было использовать для рекламы и приёма заявок.</p>
+          <span>Главное преимущество</span>
+          <h2>Почему сайт на коде выгоднее конструктора</h2>
+          <p>Вы не привязаны к платформе и не платите ежемесячно за тариф. Файлы сайта остаются у вас, а аналитику и цели можно подключить сразу под рекламу.</p>
         </div>
-        <div class="feature-grid">
-          <article><h3>Структура под заявки</h3><p>Первый экран, преимущества, портфолио, этапы и кнопки ведут к обращению.</p></article>
-          <article><h3>Дизайн под вашу нишу</h3><p>Подбираю визуал под услугу, товар и уровень доверия клиента.</p></article>
-          <article><h3>Сайт на коде</h3><p>HTML, CSS, JavaScript — без конструктора и ежемесячной подписки.</p></article>
-          <article><h3>Адаптив под смартфон</h3><p>Сайт удобно смотреть и отправлять заявку с телефона.</p></article>
-          <article><h3>Мессенджеры и звонок</h3><p>Telegram, WhatsApp и телефон всегда доступны пользователю.</p></article>
-          <article><h3>Метрика и цели</h3><p>Подключаю Яндекс.Метрику и базовые цели для отслеживания заявок.</p></article>
-          <article><h3>Размещение на хостинге</h3><p>Помогаю разместить сайт, подключить домен и проверить работу.</p></article>
+        <div class="compare-grid">
+          <article class="compare-card dark-card">
+            <h3>На коде</h3>
+            <ul>
+              <li>Один раз оплатили — сайт остаётся у вас.</li>
+              <li>Нет ежемесячной подписки за платформу.</li>
+              <li>Можно разместить на своём хостинге.</li>
+              <li>Можно подключить Метрику, цели, формы и рекламу.</li>
+              <li>Быстрее загрузка и меньше лишнего кода.</li>
+            </ul>
+          </article>
+          <article class="compare-card light-card">
+            <h3>На конструкторе</h3>
+            <ul>
+              <li>Нужно постоянно платить тариф.</li>
+              <li>Часть функций закрыта в дорогих планах.</li>
+              <li>Есть ограничения по дизайну и коду.</li>
+              <li>Сложнее перенести сайт без платформы.</li>
+              <li>Со временем расходы растут.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="included" class="section included-section">
+      <div class="container">
+        <div class="section-head">
+          <span>Что входит в цену</span>
+          <h2>В 4 499 ₽ уже входит всё для запуска</h2>
+        </div>
+        <div class="included-grid">
+          <article><b>01</b><h3>Лендинг на HTML/CSS/JS</h3><p>Без конструктора, подписки и ограничений платформы.</p></article>
+          <article><b>02</b><h3>Адаптив под телефон</h3><p>Первый экран, кнопки и формы удобно работают на мобильном.</p></article>
+          <article><b>03</b><h3>Структура под заявки</h3><p>Заголовок, оффер, преимущества, примеры и CTA собраны под обращение.</p></article>
+          <article><b>04</b><h3>Telegram / WhatsApp / звонок</h3><p>Быстрые способы связи сразу встроены в сайт.</p></article>
+          <article><b>05</b><h3>Яндекс.Метрика и цели</h3><p>Счётчик, клики по кнопкам и событие отправки квиза.</p></article>
+          <article><b>06</b><h3>Размещение на хостинге</h3><p>Помогу разместить сайт и проверить работу после запуска.</p></article>
         </div>
       </div>
     </section>
@@ -120,139 +146,36 @@
     <section id="portfolio" class="section portfolio-section">
       <div class="container">
         <div class="section-head">
-          <span>Портфолио</span>
-          <h2>Выберите стиль сайта для вашего бизнеса</h2>
-          <p>Готовые премиальные примеры для услуг и товаров. Посмотрите, как сайт будет выглядеть на ноутбуке и смартфоне, и выберите подходящий вариант для своей ниши.</p>
+          <span>Примеры</span>
+          <h2>Выберите стиль сайта под вашу нишу</h2>
+          <p>Под каждым примером есть кнопка. Нажмите «Получить макет» — квиз уточнит задачу и контакт.</p>
         </div>
         <div class="portfolio-grid">
-          <article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-01-accounting.png" alt="Бухгалтерские услуги: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-02-law.png" alt="Юридические услуги: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-03-handyman.png" alt="Мастер на час: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-04-psychologist.png" alt="Психолог онлайн: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-05-cosmetology.png" alt="Косметология: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-06-dental.png" alt="Стоматология: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-07-ecommerce.png" alt="Интернет-магазин: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-08-autoservice.png" alt="Автосервис: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-09-medical.png" alt="Медицинский центр: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-<article class="portfolio-card">
-      <div class="portfolio-img-wrap">
-        <img src="assets/portfolio/portfolio-10-renovation.png" alt="Ремонт квартир: сайт на ноутбуке и смартфоне" loading="lazy">
-      </div>
-    </article>
-        </div>
-        <div class="portfolio-cta"><a class="btn primary" href="#contacts" data-ym-goals="get_mockup">Хочу похожий сайт</a></div>
-      </div>
-    </section>
-
-    <section id="benefits" class="section benefits-section">
-      <div class="container">
-        <div class="section-head">
-          <span>Преимущества</span>
-          <h2>Почему сайт на коде выгоднее конструктора</h2>
-          <p>Вы не платите платформе каждый месяц и не зависите от тарифов. Сайт можно разместить на своём хостинге, дорабатывать и использовать без ограничений конструктора.</p>
-        </div>
-        <div class="benefits-row">
-          <div>Без подписки за платформу</div>
-          <div>Файлы сайта у вас</div>
-          <div>Быстрая загрузка</div>
-          <div>Адаптив под телефон</div>
-          <div>Метрика и цели входят</div>
-          <div>Размещение на хостинге</div>
-        </div>
-        <div class="compare">
-          <div class="compare-card code">
-            <h3>Сайт на коде</h3>
-            <ul>
-              <li>Один раз оплатили — сайт остаётся у вас.</li>
-              <li>Можно разместить на своём хостинге.</li>
-              <li>Нет ежемесячной оплаты за конструктор.</li>
-              <li>Можно дорабатывать под любые задачи.</li>
-              <li>Чище код и быстрее загрузка.</li>
-              <li>Можно подключить Метрику, формы и цели.</li>
-            </ul>
-          </div>
-          <div class="compare-card builder">
-            <h3>Сайт на конструкторе</h3>
-            <ul>
-              <li>Нужно постоянно платить подписку.</li>
-              <li>Часть функций доступна только на дорогих тарифах.</li>
-              <li>Есть ограничения по дизайну и коду.</li>
-              <li>Сложнее перенести сайт.</li>
-              <li>Можно зависеть от правил платформы.</li>
-              <li>Со временем расходы растут.</li>
-            </ul>
-          </div>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-01-accounting.webp" width="1050" height="1313" decoding="async" alt="Сайт для бухгалтерии" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_accounting">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-02-law.webp" width="1050" height="1313" decoding="async" alt="Сайт для юриста" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_law">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-03-handyman.webp" width="1050" height="1313" decoding="async" alt="Сайт мастер на час" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_handyman">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-04-psychologist.webp" width="1050" height="1313" decoding="async" alt="Сайт психолога" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_psychologist">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-05-cosmetology.webp" width="1050" height="1313" decoding="async" alt="Сайт косметологии" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_cosmetology">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-06-dental.webp" width="1050" height="1313" decoding="async" alt="Сайт стоматологии" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_dental">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-07-ecommerce.webp" width="1050" height="1313" decoding="async" alt="Сайт для товаров" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_ecommerce">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-08-autoservice.webp" width="1050" height="1313" decoding="async" alt="Сайт автосервиса" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_auto">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-09-medical.webp" width="1050" height="1313" decoding="async" alt="Сайт медицинского центра" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_medical">Получить макет</button></div></article>
+          <article class="portfolio-card"><img src="assets/portfolio/portfolio-10-renovation.webp" width="1050" height="1313" decoding="async" alt="Сайт ремонта квартир" loading="lazy"><div class="portfolio-content portfolio-content--single"><button class="mini-btn js-open-quiz" type="button" data-quiz-source="portfolio_renovation">Получить макет</button></div></article>
         </div>
       </div>
     </section>
 
-    <section id="process" class="section">
+    <section class="section process-section">
       <div class="container">
         <div class="section-head">
-          <span>Этапы</span>
-          <h2>Как вы получите сайт</h2>
+          <span>Как работаем</span>
+          <h2>Без риска: сначала макет, потом запуск</h2>
         </div>
         <div class="steps">
-          <article><b>1</b><h3>Обсуждаем задачу</h3><p>Вы рассказываете о нише, услуге, примерах и нужных контактах.</p></article>
-          <article><b>2</b><h3>Показываю макет</h3><p>Вы видите будущий сайт до оплаты основного этапа.</p></article>
-          <article><b>3</b><h3>Согласуем и собираю сайт</h3><p>Вношу правки, верстаю адаптивный сайт на коде.</p></article>
-          <article><b>4</b><h3>Запускаю и подключаю аналитику</h3><p>Размещаю на хостинге, подключаю домен, Метрику и цели.</p></article>
-        </div>
-        <div class="safe-note">Сначала макет — потом оплата основного этапа.</div>
-      </div>
-    </section>
-
-    <section class="section price-simple">
-      <div class="container">
-        <div class="price-card">
-          <span class="eyebrow">Стоимость</span>
-          <h2>Сайт или лендинг — от 7 000 ₽</h2>
-          <p>Стартовая стоимость для простого сайта под услугу или товар. Финальная цена зависит от количества блоков, страниц и нужных функций — обсуждаем это после макета.</p>
-          <ul>
-            <li>Адаптив под смартфон и ПК</li>
-            <li>Кнопки Telegram / WhatsApp / звонок</li>
-            <li>Форма заявки</li>
-            <li>Базовая SEO-структура</li>
-            <li>Яндекс.Метрика и цели</li>
-            <li>Помощь с размещением на хостинге</li>
-          </ul>
-          <a class="btn primary" href="#contacts" data-ym-goals="get_mockup">Получить макет и расчёт</a>
+          <article><b>1</b><h3>Вы проходите квиз</h3><p>Я вижу нишу, задачу и контакт.</p></article>
+          <article><b>2</b><h3>Показываю идею макета</h3><p>Согласуем первый экран и стиль.</p></article>
+          <article><b>3</b><h3>Собираю сайт</h3><p>Верстаю адаптивный лендинг на коде.</p></article>
+          <article><b>4</b><h3>Запускаю</h3><p>Подключаю Метрику, цели и размещение.</p></article>
         </div>
       </div>
     </section>
@@ -264,27 +187,21 @@
           <h2>Частые вопросы</h2>
         </div>
         <div class="faq-list">
-          <details><summary>Сайт будет на конструкторе?</summary><p>Нет. Сайт делается на коде: HTML, CSS и JavaScript.</p></details>
-          <details><summary>Нужно ли платить подписку?</summary><p>Нет. За конструктор платить не нужно. Нужны только домен и хостинг.</p></details>
-          <details><summary>Что входит в стоимость от 7 000 ₽?</summary><p>Базовый сайт или лендинг, адаптив, кнопки связи, форма заявки и подготовка к запуску.</p></details>
-          <details><summary>Вы подключаете Яндекс.Метрику?</summary><p>Да. Добавляю счётчик, базовые цели и события кликов по кнопкам.</p></details>
-          <details><summary>Когда оплачивать?</summary><p>Сначала показываю макет. Если он подходит — согласуем условия и запускаем разработку.</p></details>
-          <details><summary>Можно ли потом внести правки?</summary><p>Да. Можно менять тексты, изображения, контакты и блоки.</p></details>
+          <details><summary>Это сайт на конструкторе?</summary><p>Нет. Сайт делается на HTML, CSS и JavaScript.</p></details>
+          <details><summary>Нужно платить каждый месяц?</summary><p>За конструктор — нет. Нужны только домен и хостинг, если они платные.</p></details>
+          <details><summary>Когда платить?</summary><p>Сначала показываю идею макета. После согласования — запускаем работу.</p></details>
+          <details><summary>Метрика и цели входят?</summary><p>Да. Счётчик Метрики и базовые цели для рекламы входят.</p></details>
         </div>
       </div>
     </section>
 
     <section id="contacts" class="final-cta">
-      <div class="container final-inner contacts-inner">
+      <div class="container final-inner">
         <div>
-          <h2>Куда отправить макет сайта?</h2>
-          <p>Выберите удобный способ связи — обсудим нишу, задачу и покажу подходящий вариант.</p>
+          <h2>Получить макет под вашу нишу?</h2>
+          <p>Ответьте на 4 коротких вопроса. Имя не нужно — только Telegram или телефон.</p>
         </div>
-        <div class="contact-buttons">
-          <a class="contact-btn tg-btn" href="https://t.me/AmalTarget" target="_blank" rel="noopener" data-ym-goals="get_mockup,click_telegram">Получить макет в Telegram</a>
-          <a class="contact-btn wa-btn" href="https://wa.me/79832676282" target="_blank" rel="noopener" data-ym-goals="get_mockup,click_whatsapp">Получить макет в WhatsApp</a>
-          <a class="contact-btn phone-btn" href="tel:+79832676282" data-ym-goals="get_mockup,click_phone">Позвонить</a>
-        </div>
+        <button class="btn white-btn js-open-quiz" type="button" data-quiz-source="final">Получить макет</button>
       </div>
     </section>
   </main>
@@ -296,15 +213,21 @@
     <a class="wa" href="https://wa.me/79832676282" target="_blank" rel="noopener" aria-label="WhatsApp" data-ym-goals="click_whatsapp">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.8 9.8 0 0 0-8.5 14.8L2.3 22l5.3-1.4A9.8 9.8 0 1 0 12 2Zm0 17.8c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 19.8Zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .2-1.1 0-.2-.2-.3-.4-.4Z"/></svg>
     </a>
-    <a class="phone" href="tel:+79832676282" aria-label="Позвонить" data-ym-goals="click_phone">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.2 1.3.4 2.7.7 4.1.7.7 0 1.3.6 1.3 1.3v3.6c0 .7-.6 1.3-1.3 1.3A18.7 18.7 0 0 1 2 3.3C2 2.6 2.6 2 3.3 2H7c.7 0 1.3.6 1.3 1.3 0 1.4.2 2.8.7 4.1.1.4 0 .9-.3 1.2l-2.1 2.2Z"/></svg>
-    </a>
+  </div>
+
+  <div class="quiz-modal" id="quizModal" hidden>
+    <div class="quiz-backdrop" data-quiz-close></div>
+    <div class="quiz-dialog" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+      <button class="quiz-close" type="button" aria-label="Закрыть квиз" data-quiz-close>×</button>
+      <div class="quiz-progress" aria-hidden="true"><span id="quizProgressBar"></span></div>
+      <div id="quizBody"></div>
+    </div>
   </div>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div><strong>AmalSite</strong><p>Сайты для услуг и товаров на коде — без подписок и переплат.</p></div>
-      <div><span>Telegram</span><a href="https://t.me/AmalTarget" target="_blank" rel="noopener" data-ym-goals="click_telegram">Написать</a></div>
+      <div><strong>AmalSite</strong><p>Сайты и лендинги на коде — без конструктора и подписки.</p></div>
+      <div><span>Telegram</span><a href="https://t.me/AmalTarget" target="_blank" rel="noopener" data-ym-goals="click_telegram">@AmalTarget</a></div>
       <div><span>Телефон</span><a href="tel:+79832676282" data-ym-goals="click_phone">8 983 267-62-82</a></div>
     </div>
   </footer>
